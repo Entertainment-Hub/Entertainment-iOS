@@ -1,0 +1,6 @@
+framework module Pods_Entertainment_Hub {
+  umbrella header "Pods-Entertainment Hub-umbrella.h"
+
+  export *
+  module * { export * }
+}
