@@ -80,7 +80,7 @@ open class GradientView: UIView {
         return layer as? CAGradientLayer
     }
     
-    open override static var layerClass: AnyClass {
+    public override static var layerClass: AnyClass {
         return CAGradientLayer.self
     }
 }
