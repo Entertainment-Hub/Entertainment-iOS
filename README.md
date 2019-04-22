@@ -4,7 +4,7 @@ Discover new content to watch
 
 # Preview
 <p align="center">
-<img src = "/Demo/Demo.png" height = "475">
+ <img src = "/Demo/Preview.svg" width = "600" > 
 </p>
 
 #  Credit
