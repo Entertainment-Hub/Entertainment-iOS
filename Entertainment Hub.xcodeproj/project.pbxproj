@@ -39,7 +39,6 @@
 		4C191B1322222E0A00D1577D /* Netflix.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1222222E0A00D1577D /* Netflix.json */; };
 		4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1822222E5000D1577D /* Amazon Prime.json */; };
 		4C191B1B22222E6300D1577D /* Hulu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1A22222E6300D1577D /* Hulu.json */; };
-		4C191B1D22222EB900D1577D /* GuideBoxMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B1C22222EB900D1577D /* GuideBoxMovies.swift */; };
 		4C9FFBBD2224A4050083A237 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FFBBC2224A4050083A237 /* GoogleService-Info.plist */; };
 		5997C56B8C26F5B666F9BAC3 /* Pods_Entertainment_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */; };
 /* End PBXBuildFile section */
@@ -80,7 +79,6 @@
 		4C191B1222222E0A00D1577D /* Netflix.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Netflix.json; sourceTree = "<group>"; };
 		4C191B1822222E5000D1577D /* Amazon Prime.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime.json"; sourceTree = "<group>"; };
 		4C191B1A22222E6300D1577D /* Hulu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hulu.json; sourceTree = "<group>"; };
-		4C191B1C22222EB900D1577D /* GuideBoxMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideBoxMovies.swift; sourceTree = "<group>"; };
 		4C9FFBBC2224A4050083A237 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9296C959BDB09618F8365625 /* Pods-Entertainment Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE5552F804D5F15E4D27431 /* Pods-Entertainment Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				4C191AED2221B3C600D1577D /* GuideBoxFreeMovies.swift */,
 				4C0A112522760E2B003AA71E /* GuideBox.swift */,
 				4C191B0F22222CDD00D1577D /* Subscription.swift */,
-				4C191B1C22222EB900D1577D /* GuideBoxMovies.swift */,
 				4C0A112322760B0E003AA71E /* SubscriptionService.swift */,
 			);
 			path = Model;
@@ -394,7 +391,6 @@
 				4C191B012221D15F00D1577D /* DOExploreCollectionLayout.h in Sources */,
 				4C191B022221D15F00D1577D /* DOExploreCollectionLayout.swift in Sources */,
 				4C191B0E2221DC2D00D1577D /* MovieController.swift in Sources */,
-				4C191B1D22222EB900D1577D /* GuideBoxMovies.swift in Sources */,
 				4C191B032221D15F00D1577D /* DOExploreCollectionLayoutDelegate.swift in Sources */,
 				4C191B042221D15F00D1577D /* DOExploreCollectionViewLayoutAttributes.swift in Sources */,
 				4C0A112422760B0E003AA71E /* SubscriptionService.swift in Sources */,

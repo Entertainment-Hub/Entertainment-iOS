@@ -116,9 +116,6 @@ extension HomeController: UICollectionViewDataSource {
                 header?.titleLabel.text =  headerNames[indexPath.section - 1]
             }
         }
-        
-        
-        
         return reusableView
     }
     
