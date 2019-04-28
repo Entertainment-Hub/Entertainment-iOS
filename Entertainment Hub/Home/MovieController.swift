@@ -10,8 +10,14 @@ import Foundation
 import UIKit
 
 
-class MovieController: HomeController {
+class MovieController: UICollectionViewController {
 
+    var results: MoviesResult? {
+        didSet {
+            print(results?.originalTitle)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

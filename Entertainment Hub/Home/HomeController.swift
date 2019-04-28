@@ -17,7 +17,6 @@ class HomeController: UIViewController {
     let huluMovies = GuideBox.movies(.hulu)
     let itunesMovies = GuideBox.movies(.itunes)
 
-    
     var headerNames: [String] = []
     var moviesArray = [[MoviesResult]]()
 
@@ -29,6 +28,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         collectionView?.backgroundColor = UIColor.App.darkGray
         collectionView?.dataSource = self
+        collectionView?.delegate = self
         collectionView?.register(DOExploreCollectionCell.self, forCellWithReuseIdentifier: String(describing: DOExploreCollectionCell.self))
         collectionView?.register(DOExploreHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                  withReuseIdentifier: String(describing: DOExploreHeaderView.self))
@@ -147,6 +147,16 @@ extension HomeController: UICollectionViewDataSource {
     func numberOfSections(in _: UICollectionView) -> Int {
         // The first section is the scroll display.
         return 5
+    }
+}
+
+extension HomeController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.section, indexPath.item)
+        
+        let movieController = MovieController(collectionViewLayout: UICollectionViewFlowLayout())
+        movieController.results = moviesArray[indexPath.section][indexPath.item]
+        navigationController?.pushViewController(movieController, animated: true)        
     }
 }
 

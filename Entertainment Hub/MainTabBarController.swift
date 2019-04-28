@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController {
         // Browse
         let browseNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: HomeController())
         // Watchlist
-        let watchListNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Watchlist"), selectedImage: #imageLiteral(resourceName: "Watchlist"), rootViewController: WatchListController(collectionViewLayout: UICollectionViewFlowLayout()))
+        //let searchNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Watchlist"), selectedImage: #imageLiteral(resourceName: "Watchlist"), rootViewController: SearchController())
         
         // Library
         let libraryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Library"), selectedImage: #imageLiteral(resourceName: "Library"), rootViewController: LibraryController(collectionViewLayout: UICollectionViewFlowLayout()))
@@ -35,7 +35,9 @@ class MainTabBarController: UITabBarController {
         
         
         modifyTabBarAppearance()
-        viewControllers = [browseNavController, watchListNavController, libraryNavController, userProfileNavController, settingsNavController]
+        viewControllers = [browseNavController, libraryNavController, userProfileNavController, settingsNavController]
+        //viewControllers = [browseNavController, searchNavController, libraryNavController, userProfileNavController, settingsNavController]
+        //viewControllers = [searchNavController, browseNavController, libraryNavController, userProfileNavController, settingsNavController]
     }
     
     fileprivate func modifyTabBarAppearance() {

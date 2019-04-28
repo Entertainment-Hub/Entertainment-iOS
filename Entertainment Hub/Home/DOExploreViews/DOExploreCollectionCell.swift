@@ -62,7 +62,7 @@ open class GradientView: UIView {
     }
     
     private func configure() {
-        isUserInteractionEnabled = false
+        isUserInteractionEnabled = true
         clipsToBounds = true
         backgroundColor = nil
         gradientLayer?.endPoint = CGPoint(x: 0.5, y: 0)

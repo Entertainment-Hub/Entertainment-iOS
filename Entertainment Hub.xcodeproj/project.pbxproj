@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		4C0A112422760B0E003AA71E /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A112322760B0E003AA71E /* SubscriptionService.swift */; };
 		4C0A112622760E2B003AA71E /* GuideBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A112522760E2B003AA71E /* GuideBox.swift */; };
+		4C0A112822766899003AA71E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A112722766899003AA71E /* SearchCell.swift */; };
 		4C191AC42221A72400D1577D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191AC32221A72400D1577D /* AppDelegate.swift */; };
 		4C191ACB2221A72500D1577D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C191ACA2221A72500D1577D /* Assets.xcassets */; };
 		4C191ACE2221A72500D1577D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C191ACC2221A72500D1577D /* LaunchScreen.storyboard */; };
 		4C191AD62221A8AC00D1577D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191AD52221A8AC00D1577D /* MainTabBarController.swift */; };
 		4C191AD82221ABAC00D1577D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191AD72221ABAC00D1577D /* HomeController.swift */; };
 		4C191ADA2221AC1F00D1577D /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191AD92221AC1F00D1577D /* UserProfileController.swift */; };
-		4C191ADC2221AE4400D1577D /* WatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191ADB2221AE4400D1577D /* WatchListController.swift */; };
+		4C191ADC2221AE4400D1577D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191ADB2221AE4400D1577D /* SearchController.swift */; };
 		4C191ADE2221AE8D00D1577D /* LibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191ADD2221AE8D00D1577D /* LibraryController.swift */; };
 		4C191AE02221AED800D1577D /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191ADF2221AED800D1577D /* SettingsController.swift */; };
 		4C191AE92221B29B00D1577D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191AE82221B29B00D1577D /* Extensions.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		4C0A112322760B0E003AA71E /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		4C0A112522760E2B003AA71E /* GuideBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideBox.swift; sourceTree = "<group>"; };
+		4C0A112722766899003AA71E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		4C191AC02221A72400D1577D /* Entertainment Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Entertainment Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C191AC32221A72400D1577D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C191ACA2221A72500D1577D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		4C191AD52221A8AC00D1577D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4C191AD72221ABAC00D1577D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		4C191AD92221AC1F00D1577D /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
-		4C191ADB2221AE4400D1577D /* WatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListController.swift; sourceTree = "<group>"; };
+		4C191ADB2221AE4400D1577D /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		4C191ADD2221AE8D00D1577D /* LibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryController.swift; sourceTree = "<group>"; };
 		4C191ADF2221AED800D1577D /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		4C191AE12221AFE500D1577D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -129,7 +131,7 @@
 				4C191AC32221A72400D1577D /* AppDelegate.swift */,
 				4C191AD52221A8AC00D1577D /* MainTabBarController.swift */,
 				4C191AE22221B21100D1577D /* Home */,
-				4C191AE32221B22600D1577D /* Watchlist */,
+				4C191AE32221B22600D1577D /* Search */,
 				4C191AE42221B22F00D1577D /* Settings */,
 				4C191AE62221B24100D1577D /* User Profile */,
 				4C191AE52221B23400D1577D /* Library */,
@@ -155,12 +157,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4C191AE32221B22600D1577D /* Watchlist */ = {
+		4C191AE32221B22600D1577D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				4C191ADB2221AE4400D1577D /* WatchListController.swift */,
+				4C191ADB2221AE4400D1577D /* SearchController.swift */,
+				4C0A112722766899003AA71E /* SearchCell.swift */,
 			);
-			path = Watchlist;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		4C191AE42221B22F00D1577D /* Settings */ = {
@@ -391,12 +394,13 @@
 				4C191AF02221BC3100D1577D /* TestInject.swift in Sources */,
 				4C0A112622760E2B003AA71E /* GuideBox.swift in Sources */,
 				4C191AC42221A72400D1577D /* AppDelegate.swift in Sources */,
+				4C0A112822766899003AA71E /* SearchCell.swift in Sources */,
 				4C191B1022222CDD00D1577D /* Subscription.swift in Sources */,
 				4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */,
 				4C191AF32221BDEC00D1577D /* GLIndexedCollectionViewCell.swift in Sources */,
 				4C191AE92221B29B00D1577D /* Extensions.swift in Sources */,
 				4C191AEE2221B3C600D1577D /* GuideBoxFreeMovies.swift in Sources */,
-				4C191ADC2221AE4400D1577D /* WatchListController.swift in Sources */,
+				4C191ADC2221AE4400D1577D /* SearchController.swift in Sources */,
 				4C191B0C2221D2C600D1577D /* DOExploreHeaderView.swift in Sources */,
 				4C191AF72221BED800D1577D /* GLTableCollectionViewController.swift in Sources */,
 				4C191ADE2221AE8D00D1577D /* LibraryController.swift in Sources */,
