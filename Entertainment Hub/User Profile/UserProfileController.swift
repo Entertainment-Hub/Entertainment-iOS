@@ -8,9 +8,6 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
-import FirebaseStorage
-import FirebaseDatabase
 
 class UserProfileController: UIViewController {
     
@@ -109,7 +106,7 @@ class UserProfileController: UIViewController {
         guard let email = emailTextField.text, !email.isEmpty  else { return }
         guard let username = usernameTextField.text, !username.isEmpty  else { return }
         guard let password = passwordTextField.text, !password.isEmpty  else { return }
-        
+        /*
         Auth.auth().createUser(withEmail: email, password: password) { (authDataResult: AuthDataResult?, error: Error?) in
             if let err = error {
                 print("failed to create user:", err)
@@ -152,7 +149,7 @@ class UserProfileController: UIViewController {
                     })
                 })
             })
-        }
+        } */
     }
     
     @objc func handleTextInputChange() {

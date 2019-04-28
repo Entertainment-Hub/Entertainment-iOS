@@ -39,7 +39,6 @@
 		4C191B1322222E0A00D1577D /* Netflix.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1222222E0A00D1577D /* Netflix.json */; };
 		4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1822222E5000D1577D /* Amazon Prime.json */; };
 		4C191B1B22222E6300D1577D /* Hulu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1A22222E6300D1577D /* Hulu.json */; };
-		4C9FFBBD2224A4050083A237 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FFBBC2224A4050083A237 /* GoogleService-Info.plist */; };
 		5997C56B8C26F5B666F9BAC3 /* Pods_Entertainment_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +78,6 @@
 		4C191B1222222E0A00D1577D /* Netflix.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Netflix.json; sourceTree = "<group>"; };
 		4C191B1822222E5000D1577D /* Amazon Prime.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime.json"; sourceTree = "<group>"; };
 		4C191B1A22222E6300D1577D /* Hulu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hulu.json; sourceTree = "<group>"; };
-		4C9FFBBC2224A4050083A237 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9296C959BDB09618F8365625 /* Pods-Entertainment Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE5552F804D5F15E4D27431 /* Pods-Entertainment Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.release.xcconfig"; sourceTree = "<group>"; };
 		E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entertainment_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +193,6 @@
 				4C191AEF2221BC3100D1577D /* TestInject.swift */,
 				4C191AE82221B29B00D1577D /* Extensions.swift */,
 				4C191AEA2221B2C600D1577D /* Configuration.plist */,
-				4C9FFBBC2224A4050083A237 /* GoogleService-Info.plist */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 				4C191B1322222E0A00D1577D /* Netflix.json in Resources */,
 				4C191AF92221CB5A00D1577D /* GLIndexedCollectionViewCell.xib in Resources */,
 				4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */,
-				4C9FFBBD2224A4050083A237 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,19 +340,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

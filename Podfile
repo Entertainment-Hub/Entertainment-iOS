@@ -7,9 +7,5 @@ target 'Entertainment Hub' do
 
   # Pods for Entertainment Hub
   pod 'Kingfisher'
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-
+  pod "SkeletonView"
 end
