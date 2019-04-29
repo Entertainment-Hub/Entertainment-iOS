@@ -37,6 +37,7 @@ class TitleController: UICollectionViewController {
 extension TitleController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! TitleProfileHeader
+        header.delegate = self
         header.result = self.result
         return header
     }

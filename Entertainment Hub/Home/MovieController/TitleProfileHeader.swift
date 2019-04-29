@@ -12,6 +12,9 @@ import Kingfisher
 class TitleProfileHeader: UICollectionViewCell {
     
     
+    weak var delegate:TitleController?
+
+    
     var result: MovieResult? {
         didSet {
             guard let result = self.result else { return }
@@ -103,6 +106,10 @@ class TitleProfileHeader: UICollectionViewCell {
     
     @objc fileprivate func displayWebPurchases() {
         print(movieData?.purchaseWebSources)
+        let purchaseController = PurchaseTableController(collectionViewLayout: UICollectionViewFlowLayout())
+        guard let movieData = self.movieData else { return }
+        purchaseController.purchaseWebSources = movieData.purchaseWebSources
+        delegate?.navigationController?.pushViewController(purchaseController, animated: true)
     }
     
     @objc fileprivate func handleimdb() {
