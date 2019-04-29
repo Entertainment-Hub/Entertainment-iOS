@@ -19,10 +19,23 @@ class TitleProfileHeader: UICollectionViewCell {
             titleImageView.kf.setImage(with:url)
             
             titleLabel.text = result.title + " " + "(\(result.releaseYear))"
-            
+            makeMetadataRequest()
         }
     }
 
+    fileprivate func makeMetadataRequest() {
+        let movie = GuideBox.movies(.none)
+        guard let result = result else { return }
+        movie.movieMetadata(ID: String(result.id)) { (metadata, error) in
+            guard let metadata = metadata else { return }
+            print(metadata.overview)
+            
+            DispatchQueue.main.async {
+                self.titleDescription.text = metadata.overview
+            }
+        }
+        
+    }
     
     let titleImageView: UIImageView = {
         let imageView = UIImageView()
@@ -42,7 +55,7 @@ class TitleProfileHeader: UICollectionViewCell {
         label.textColor = .white
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
-        label.text = "An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' Avengers: Infinity War brings to the screen the ultimate, deadliest showdown of all time. The Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe."
+        //label.text = "An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' Avengers: Infinity War brings to the screen the ultimate, deadliest showdown of all time. The Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe."
         return label
     }()
     

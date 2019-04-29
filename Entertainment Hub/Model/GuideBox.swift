@@ -87,11 +87,11 @@ extension GuideBox: Moya {
         return components
     }
     
-    var metaComponents: URLComponents {
+    func setMetaComponents(ID: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
-        components.path = self.path
+        components.path = self.path + "/\(ID)"
         
         components.queryItems =  [
             URLQueryItem(name: "api_key", value: self.apiKey),
@@ -118,7 +118,22 @@ extension GuideBox: Moya {
             }.resume()
     }
     
-    func movieMetadata(id: Int, completion: @escaping (_ annotations: MovieMetadata, _ error: Error?) -> Void) {
+    func movieMetadata(ID:String, completion: @escaping (_ annotations: MovieMetadata?, _ error: Error?) -> Void) {
+        guard let url = self.setMetaComponents(ID: ID).url else { return  }
+        print("---")
+        print(url)
+        print("---")
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else { return }
+            do {
+                let decoder = JSONDecoder()
+                let metaData = try decoder.decode(MovieMetadata.self, from: data)
+                completion(metaData, nil)
+                
+            } catch let error as NSError {
+                completion(nil, error)
+            }
+            }.resume()
         
     }
 }

@@ -14,6 +14,7 @@ enum SubscriptionName: String {
     case amazonPrime = "Amazon Prime"
     case hulu = "Hulu"
     case itunes = "iTunes"
+    case none = ""
 
 }
 
