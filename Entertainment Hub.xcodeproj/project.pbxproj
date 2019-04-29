@@ -40,6 +40,9 @@
 		4C191B1322222E0A00D1577D /* Netflix.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1222222E0A00D1577D /* Netflix.json */; };
 		4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1822222E5000D1577D /* Amazon Prime.json */; };
 		4C191B1B22222E6300D1577D /* Hulu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1A22222E6300D1577D /* Hulu.json */; };
+		4C599C6D22774637003A7904 /* TitleProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C6C22774637003A7904 /* TitleProfileHeader.swift */; };
+		4C599C6F227748DA003A7904 /* TitlePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C6E227748DA003A7904 /* TitlePhotoCell.swift */; };
+		4C599C7122774988003A7904 /* TitlePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C7022774988003A7904 /* TitlePostCell.swift */; };
 		4CB0D7272276898D007B99DC /* SubscriptionShowFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */; };
 		4CCDDBD02276766600D95470 /* iTunes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBCF2276766600D95470 /* iTunes.json */; };
 		4CCDDBD2227679AA00D95470 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD1227679AA00D95470 /* Subscription.swift */; };
@@ -87,6 +90,9 @@
 		4C191B1222222E0A00D1577D /* Netflix.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Netflix.json; sourceTree = "<group>"; };
 		4C191B1822222E5000D1577D /* Amazon Prime.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime.json"; sourceTree = "<group>"; };
 		4C191B1A22222E6300D1577D /* Hulu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hulu.json; sourceTree = "<group>"; };
+		4C599C6C22774637003A7904 /* TitleProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleProfileHeader.swift; sourceTree = "<group>"; };
+		4C599C6E227748DA003A7904 /* TitlePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePhotoCell.swift; sourceTree = "<group>"; };
+		4C599C7022774988003A7904 /* TitlePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePostCell.swift; sourceTree = "<group>"; };
 		4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionShowFormat.swift; sourceTree = "<group>"; };
 		4CCDDBCF2276766600D95470 /* iTunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = iTunes.json; sourceTree = "<group>"; };
 		4CCDDBD1227679AA00D95470 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 				4C191AF12221BDC600D1577D /* GLTableCollectionView */,
 				4C191AD72221ABAC00D1577D /* HomeController.swift */,
 				4C191B0D2221DC2D00D1577D /* TitleController.swift */,
+				4C599C6C22774637003A7904 /* TitleProfileHeader.swift */,
+				4C599C6E227748DA003A7904 /* TitlePhotoCell.swift */,
+				4C599C7022774988003A7904 /* TitlePostCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -424,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C191B012221D15F00D1577D /* DOExploreCollectionLayout.h in Sources */,
+				4C599C6F227748DA003A7904 /* TitlePhotoCell.swift in Sources */,
 				4C191B022221D15F00D1577D /* DOExploreCollectionLayout.swift in Sources */,
 				4C191B0E2221DC2D00D1577D /* TitleController.swift in Sources */,
 				4C191B032221D15F00D1577D /* DOExploreCollectionLayoutDelegate.swift in Sources */,
@@ -442,8 +452,10 @@
 				4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */,
 				4C191AF32221BDEC00D1577D /* GLIndexedCollectionViewCell.swift in Sources */,
 				4C191AE92221B29B00D1577D /* Extensions.swift in Sources */,
+				4C599C6D22774637003A7904 /* TitleProfileHeader.swift in Sources */,
 				4CCDDBD2227679AA00D95470 /* Subscription.swift in Sources */,
 				4C191AEE2221B3C600D1577D /* GuideBoxFreeMovies.swift in Sources */,
+				4C599C7122774988003A7904 /* TitlePostCell.swift in Sources */,
 				4C191ADC2221AE4400D1577D /* SearchController.swift in Sources */,
 				4C191B0C2221D2C600D1577D /* DOExploreHeaderView.swift in Sources */,
 				4C191AF72221BED800D1577D /* GLTableCollectionViewController.swift in Sources */,

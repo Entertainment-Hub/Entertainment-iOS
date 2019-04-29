@@ -62,7 +62,7 @@ class HomeController: UIViewController {
     
     @objc fileprivate func handleChange() {
         MKProgress.show(after: 0.1, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.collectionView?.reloadData()
             MKProgress.hide(true)
         }
@@ -171,13 +171,12 @@ extension HomeController: UICollectionViewDelegate {
         print(indexPath.section, indexPath.item)
         
         let movieController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
-        movieController.results = moviesArray[indexPath.section][indexPath.item]
+        movieController.result = moviesArray[indexPath.section][indexPath.item]
         navigationController?.pushViewController(movieController, animated: true)        
     }
 }
 
 // MARK: Configuring status bar and NavBar
-
 extension HomeController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
