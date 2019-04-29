@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class MovieController: UICollectionViewController {
+class TitleController: UICollectionViewController {
 
     var results: MovieResult? {
         didSet {

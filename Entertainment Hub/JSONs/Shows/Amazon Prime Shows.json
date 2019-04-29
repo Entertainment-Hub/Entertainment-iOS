@@ -3,28 +3,6 @@
     "total_returned":25,
     "results":[
         {
-            "id":5013,
-            "title":"Roseanne",
-            "alternate_titles":[
-                
-            ],
-            "container_show":0,
-            "first_aired":"1988-10-18",
-            "imdb_id":"tt0094540",
-            "tvdb":77068,
-            "themoviedb":2706,
-            "freebase":"\/m\/0n8f3",
-            "wikipedia_id":93801,
-            "tvrage":{
-                "tvrage_id":5055,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-5055"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/thumbnails_small\/5013-2869887273-208x117.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/thumbnails_medium\/5013-8193919668-304x171.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/thumbnails_large\/5013-8809199528-448x252.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/thumbnails_xlarge\/5013-5172532708-608x342.jpg"
-        },
-        {
             "id":300,
             "title":"Suits",
             "alternate_titles":[
@@ -69,31 +47,6 @@
             "artwork_608x342":"http:\/\/static-api.guidebox.com\/120214\/thumbnails_xlarge\/14554-1164331185-608x342-show-thumbnail.jpg"
         },
         {
-            "id":307,
-            "title":"Law & Order: Special Victims Unit",
-            "alternate_titles":[
-                "Law and Order: New York",
-                "Law and Order: Special Victims Unit",
-                "Law and Order: SVU",
-                "Law & Order: SVU"
-            ],
-            "container_show":0,
-            "first_aired":"1999-09-20",
-            "imdb_id":"tt0203259",
-            "tvdb":75692,
-            "themoviedb":2734,
-            "freebase":"\/m\/01b_lz",
-            "wikipedia_id":197060,
-            "tvrage":{
-                "tvrage_id":4204,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-4204"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/thumbnails_small\/307-5936161275-208x117.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/thumbnails_medium\/307-9533812892-304x171.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/thumbnails_large\/307-9753355067-448x252.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/thumbnails_xlarge\/307-8820663467-608x342.jpg"
-        },
-        {
             "id":13893,
             "title":"The Americans",
             "alternate_titles":[
@@ -136,6 +89,124 @@
             "artwork_304x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_medium\/2105-966840396-304x171-show-thumbnail.jpg",
             "artwork_448x252":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_large\/2105-3920101766-448x252-show-thumbnail.jpg",
             "artwork_608x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_xlarge\/2105-2024834049-608x342-show-thumbnail.jpg"
+        },
+        {
+            "id":208,
+            "title":"Parks and Recreation",
+            "alternate_titles":[
+                "Public Service",
+                "The Untitled Amy Poehler Project",
+                "The Office spinoff",
+                "The Untitled Office Spin-Off",
+                "Parks and Rec"
+            ],
+            "container_show":0,
+            "first_aired":"2009-04-09",
+            "imdb_id":"tt1266020",
+            "tvdb":84912,
+            "themoviedb":8592,
+            "freebase":"\/m\/0557yqh",
+            "wikipedia_id":20803357,
+            "tvrage":{
+                "tvrage_id":21686,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-21686"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_small\/208-9493863498-208x117-show-thumbnail.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/208-7239209525-304x171-show-thumbnail.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/208-5501169516-448x252-show-thumbnail.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/208-1266064234-608x342-show-thumbnail.jpg"
+        },
+        {
+            "id":28164,
+            "title":"Mr. Robot",
+            "alternate_titles":[
+                
+            ],
+            "container_show":0,
+            "first_aired":"2015-06-24",
+            "imdb_id":"tt4158110",
+            "tvdb":289590,
+            "themoviedb":62560,
+            "freebase":"62560",
+            "wikipedia_id":44801986,
+            "tvrage":{
+                "tvrage_id":42422,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-42422"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_small\/28164-7241858798-208x117.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_medium\/28164-5318384925-304x171.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_large\/28164-8163115247-448x252.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_xlarge\/28164-1547860718-608x342.jpg"
+        },
+        {
+            "id":56,
+            "title":"House",
+            "alternate_titles":[
+                "House M.D.",
+                "House, M.D."
+            ],
+            "container_show":0,
+            "first_aired":"2004-11-16",
+            "imdb_id":"tt0412142",
+            "tvdb":73255,
+            "themoviedb":1408,
+            "freebase":"\/m\/04p5cr",
+            "wikipedia_id":1273596,
+            "tvrage":{
+                "tvrage_id":3908,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-3908"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_small\/56-9528278578-208x117-title-card.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/56-3153635930-304x171-title-card.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/56-5482161669-448x252-title-card.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/56-8016869616-608x342-title-card.jpg"
+        },
+        {
+            "id":5013,
+            "title":"Roseanne",
+            "alternate_titles":[
+                
+            ],
+            "container_show":0,
+            "first_aired":"1988-10-18",
+            "imdb_id":"tt0094540",
+            "tvdb":77068,
+            "themoviedb":2706,
+            "freebase":"\/m\/0n8f3",
+            "wikipedia_id":93801,
+            "tvrage":{
+                "tvrage_id":5055,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-5055"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/thumbnails_small\/5013-2869887273-208x117.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/thumbnails_medium\/5013-8193919668-304x171.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/thumbnails_large\/5013-8809199528-448x252.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/thumbnails_xlarge\/5013-5172532708-608x342.jpg"
+        },
+        {
+            "id":307,
+            "title":"Law & Order: Special Victims Unit",
+            "alternate_titles":[
+                "Law and Order: New York",
+                "Law and Order: Special Victims Unit",
+                "Law and Order: SVU",
+                "Law & Order: SVU"
+            ],
+            "container_show":0,
+            "first_aired":"1999-09-20",
+            "imdb_id":"tt0203259",
+            "tvdb":75692,
+            "themoviedb":2734,
+            "freebase":"\/m\/01b_lz",
+            "wikipedia_id":197060,
+            "tvrage":{
+                "tvrage_id":4204,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-4204"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/thumbnails_small\/307-5936161275-208x117.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/thumbnails_medium\/307-9533812892-304x171.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/thumbnails_large\/307-9753355067-448x252.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/thumbnails_xlarge\/307-8820663467-608x342.jpg"
         },
         {
             "id":621,
@@ -230,32 +301,6 @@
             "artwork_304x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_medium\/10964-4520700257-304x171.jpg",
             "artwork_448x252":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_large\/10964-1282603150-448x252.jpg",
             "artwork_608x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_xlarge\/10964-9254983840-608x342.jpg"
-        },
-        {
-            "id":208,
-            "title":"Parks and Recreation",
-            "alternate_titles":[
-                "Public Service",
-                "The Untitled Amy Poehler Project",
-                "The Office spinoff",
-                "The Untitled Office Spin-Off",
-                "Parks and Rec"
-            ],
-            "container_show":0,
-            "first_aired":"2009-04-09",
-            "imdb_id":"tt1266020",
-            "tvdb":84912,
-            "themoviedb":8592,
-            "freebase":"\/m\/0557yqh",
-            "wikipedia_id":20803357,
-            "tvrage":{
-                "tvrage_id":21686,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-21686"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_small\/208-9493863498-208x117-show-thumbnail.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/208-7239209525-304x171-show-thumbnail.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/208-5501169516-448x252-show-thumbnail.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/208-1266064234-608x342-show-thumbnail.jpg"
         },
         {
             "id":6969,
@@ -368,29 +413,6 @@
             "artwork_608x342":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_xlarge\/38916-4813022087-608x342.jpg"
         },
         {
-            "id":56,
-            "title":"House",
-            "alternate_titles":[
-                "House M.D.",
-                "House, M.D."
-            ],
-            "container_show":0,
-            "first_aired":"2004-11-16",
-            "imdb_id":"tt0412142",
-            "tvdb":73255,
-            "themoviedb":1408,
-            "freebase":"\/m\/04p5cr",
-            "wikipedia_id":1273596,
-            "tvrage":{
-                "tvrage_id":3908,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-3908"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_small\/56-9528278578-208x117-title-card.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/56-3153635930-304x171-title-card.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/56-5482161669-448x252-title-card.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/56-8016869616-608x342-title-card.jpg"
-        },
-        {
             "id":7135,
             "title":"The Wire",
             "alternate_titles":[
@@ -433,28 +455,6 @@
             "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/294-3284454523-304x171-show-thumbnail.jpg",
             "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/294-7646362162-448x252-show-thumbnail.jpg",
             "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/294-706329099-608x342-show-thumbnail.jpg"
-        },
-        {
-            "id":28164,
-            "title":"Mr. Robot",
-            "alternate_titles":[
-                
-            ],
-            "container_show":0,
-            "first_aired":"2015-06-24",
-            "imdb_id":"tt4158110",
-            "tvdb":289590,
-            "themoviedb":62560,
-            "freebase":"62560",
-            "wikipedia_id":44801986,
-            "tvrage":{
-                "tvrage_id":42422,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-42422"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_small\/28164-7241858798-208x117.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_medium\/28164-5318384925-304x171.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_large\/28164-8163115247-448x252.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_xlarge\/28164-1547860718-608x342.jpg"
         },
         {
             "id":10353,

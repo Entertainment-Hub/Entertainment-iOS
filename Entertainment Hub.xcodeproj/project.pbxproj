@@ -35,7 +35,7 @@
 		4C191B062221D15F00D1577D /* DOScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191AFC2221D14B00D1577D /* DOScrollView.swift */; };
 		4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B092221D2AC00D1577D /* DOExploreCollectionCell.swift */; };
 		4C191B0C2221D2C600D1577D /* DOExploreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0B2221D2C600D1577D /* DOExploreHeaderView.swift */; };
-		4C191B0E2221DC2D00D1577D /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0D2221DC2D00D1577D /* MovieController.swift */; };
+		4C191B0E2221DC2D00D1577D /* TitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0D2221DC2D00D1577D /* TitleController.swift */; };
 		4C191B1022222CDD00D1577D /* SubscriptionMovieFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0F22222CDD00D1577D /* SubscriptionMovieFormat.swift */; };
 		4C191B1322222E0A00D1577D /* Netflix.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1222222E0A00D1577D /* Netflix.json */; };
 		4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1822222E5000D1577D /* Amazon Prime.json */; };
@@ -82,7 +82,7 @@
 		4C191B002221D14B00D1577D /* DOExploreCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOExploreCollectionLayout.swift; sourceTree = "<group>"; };
 		4C191B092221D2AC00D1577D /* DOExploreCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOExploreCollectionCell.swift; sourceTree = "<group>"; };
 		4C191B0B2221D2C600D1577D /* DOExploreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOExploreHeaderView.swift; sourceTree = "<group>"; };
-		4C191B0D2221DC2D00D1577D /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		4C191B0D2221DC2D00D1577D /* TitleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleController.swift; sourceTree = "<group>"; };
 		4C191B0F22222CDD00D1577D /* SubscriptionMovieFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionMovieFormat.swift; sourceTree = "<group>"; };
 		4C191B1222222E0A00D1577D /* Netflix.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Netflix.json; sourceTree = "<group>"; };
 		4C191B1822222E5000D1577D /* Amazon Prime.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime.json"; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				4C191AFA2221D13700D1577D /* DOExploreCollectionLayout */,
 				4C191AF12221BDC600D1577D /* GLTableCollectionView */,
 				4C191AD72221ABAC00D1577D /* HomeController.swift */,
-				4C191B0D2221DC2D00D1577D /* MovieController.swift */,
+				4C191B0D2221DC2D00D1577D /* TitleController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -425,7 +425,7 @@
 			files = (
 				4C191B012221D15F00D1577D /* DOExploreCollectionLayout.h in Sources */,
 				4C191B022221D15F00D1577D /* DOExploreCollectionLayout.swift in Sources */,
-				4C191B0E2221DC2D00D1577D /* MovieController.swift in Sources */,
+				4C191B0E2221DC2D00D1577D /* TitleController.swift in Sources */,
 				4C191B032221D15F00D1577D /* DOExploreCollectionLayoutDelegate.swift in Sources */,
 				4C191B042221D15F00D1577D /* DOExploreCollectionViewLayoutAttributes.swift in Sources */,
 				4C0A112422760B0E003AA71E /* SubscriptionService.swift in Sources */,
