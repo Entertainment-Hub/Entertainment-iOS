@@ -15,7 +15,7 @@ enum GuideBox {
 
 protocol Path {
     var path : String { get }
-    var source: String {get}
+    var source: String { get }
 }
 
 extension GuideBox : Path {
@@ -87,6 +87,18 @@ extension GuideBox: Moya {
         return components
     }
     
+    var metaComponents: URLComponents {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = self.path
+        
+        components.queryItems =  [
+            URLQueryItem(name: "api_key", value: self.apiKey),
+        ]
+        return components
+    }
+    
     
     func get(completion: @escaping (_ annotations: [MovieResult], _ error: Error?) -> Void) {
         guard let url = self.components.url else { return  }
@@ -104,5 +116,9 @@ extension GuideBox: Moya {
                 completion([], error)
             }
             }.resume()
+    }
+    
+    func movieMetadata(id: Int, completion: @escaping (_ annotations: MovieMetadata, _ error: Error?) -> Void) {
+        
     }
 }

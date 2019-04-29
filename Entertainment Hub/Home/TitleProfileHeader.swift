@@ -31,11 +31,20 @@ class TitleProfileHeader: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = .white
         return label
     }()
     
+    let titleDescription: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 13)
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.text = "An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' Avengers: Infinity War brings to the screen the ultimate, deadliest showdown of all time. The Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe."
+        return label
+    }()
     
     lazy var imdbButton: UIButton = {
         let button = UIButton(type: .custom)
@@ -110,16 +119,17 @@ class TitleProfileHeader: UICollectionViewCell {
         super.init(frame: frame)
         addSubview(titleImageView)
         addSubview(titleLabel)
+        addSubview(titleDescription)
         
-        titleImageView.anchor(top: topAnchor, bottom: nil, left: leftAnchor, right: nil, paddingTop: 12, paddingBottom: 0, paddingLeft: 12, paddingRight: 0, width: 80, height: 80)
+        titleImageView.anchor(top: topAnchor, bottom: nil, left: leftAnchor, right: nil, paddingTop: 12, paddingBottom: 0, paddingLeft: 12, paddingRight: 0, width: 80, height: 130)
         titleImageView.clipsToBounds = true
         
         setupBottomToolbar()
         
-        titleLabel.anchor(top: titleImageView.bottomAnchor, bottom: imdbButton.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 0)
+        titleLabel.anchor(top: nil, bottom: imdbButton.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 50)
         
         //UIImageViewsetupUserStats()
-        
+        titleDescription.anchor(top: titleImageView.topAnchor, bottom: titleLabel.topAnchor, left: titleImageView.rightAnchor, right: self.rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 8, paddingRight: 6, width: 0, height: 0)
     }
     
     fileprivate func setupBottomToolbar() {
