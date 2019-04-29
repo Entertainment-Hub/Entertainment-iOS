@@ -41,6 +41,7 @@
 		4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1822222E5000D1577D /* Amazon Prime.json */; };
 		4C191B1B22222E6300D1577D /* Hulu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1A22222E6300D1577D /* Hulu.json */; };
 		4CCDDBD02276766600D95470 /* iTunes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBCF2276766600D95470 /* iTunes.json */; };
+		4CCDDBD2227679AA00D95470 /* SubscriptionMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD1227679AA00D95470 /* SubscriptionMovies.swift */; };
 		5997C56B8C26F5B666F9BAC3 /* Pods_Entertainment_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		4C191B1822222E5000D1577D /* Amazon Prime.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime.json"; sourceTree = "<group>"; };
 		4C191B1A22222E6300D1577D /* Hulu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hulu.json; sourceTree = "<group>"; };
 		4CCDDBCF2276766600D95470 /* iTunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = iTunes.json; sourceTree = "<group>"; };
+		4CCDDBD1227679AA00D95470 /* SubscriptionMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionMovies.swift; sourceTree = "<group>"; };
 		9296C959BDB09618F8365625 /* Pods-Entertainment Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE5552F804D5F15E4D27431 /* Pods-Entertainment Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.release.xcconfig"; sourceTree = "<group>"; };
 		E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entertainment_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 				4C0A112522760E2B003AA71E /* GuideBox.swift */,
 				4C191B0F22222CDD00D1577D /* Subscription.swift */,
 				4C0A112322760B0E003AA71E /* SubscriptionService.swift */,
+				4CCDDBD1227679AA00D95470 /* SubscriptionMovies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */,
 				4C191AF32221BDEC00D1577D /* GLIndexedCollectionViewCell.swift in Sources */,
 				4C191AE92221B29B00D1577D /* Extensions.swift in Sources */,
+				4CCDDBD2227679AA00D95470 /* SubscriptionMovies.swift in Sources */,
 				4C191AEE2221B3C600D1577D /* GuideBoxFreeMovies.swift in Sources */,
 				4C191ADC2221AE4400D1577D /* SearchController.swift in Sources */,
 				4C191B0C2221D2C600D1577D /* DOExploreHeaderView.swift in Sources */,

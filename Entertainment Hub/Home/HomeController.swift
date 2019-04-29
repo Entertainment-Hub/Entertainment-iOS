@@ -12,12 +12,13 @@ import Kingfisher
 
 class HomeController: UIViewController {    
     let request = RequestMovies()
-    let netflixMovies = GuideBox.movies(.netflix)
-    let amazonPrimeMovies = GuideBox.movies(.amazonPrime)
-    let huluMovies = GuideBox.movies(.hulu)
-    let itunesMovies = GuideBox.movies(.itunes)
-
-    var headerNames: [String] = []
+     
+    let netflixMovies = SubscriptionMovies(from: .netflix)
+    let amazonPrimeMovies = SubscriptionMovies(from: .amazonPrime)
+    let itunesMovies = SubscriptionMovies(from: .itunes)
+    let huluMovies = SubscriptionMovies(from: .hulu)
+    
+    var headerNames = ["Amazon Prime", "Netflix", "iTunes", "Hulu"]
     var moviesArray = [[MoviesResult]]()
 
     override func loadView() {
@@ -42,42 +43,20 @@ class HomeController: UIViewController {
     }
     
     fileprivate func getMovies() {
-        let group = DispatchGroup()
-        
-        group.enter()
-        amazonPrimeMovies.get { (moviesResult, error) in
-            self.moviesArray.append(moviesResult)
-            self.headerNames.append(SubscriptionName.amazonPrime.rawValue)
-            group.leave()
-        }
-        
-        group.enter()
-        netflixMovies.get { (moviesResult, error) in
-            self.moviesArray.append(moviesResult)
-            self.headerNames.append(SubscriptionName.netflix.rawValue)
-            group.leave()
-        }
-        
-        group.enter()
-        huluMovies.get { (moviesResult, error) in
-            self.moviesArray.append(moviesResult)
-            self.headerNames.append(SubscriptionName.hulu.rawValue)
-            group.leave()
-        }
-        
-        group.enter()
-        itunesMovies.get { (moviesResult, error) in
-            self.moviesArray.append(moviesResult)
-            self.headerNames.append(SubscriptionName.itunes.rawValue)
-            group.leave()
-        }
-        
-        group.notify(queue: DispatchQueue.main, execute: {
-            print("all functions complete")
-            self.collectionView!.reloadData()
-            print(self.moviesArray.count)
-            print(self.headerNames.count)
-        })
+        guard let netflixMovies = netflixMovies.allMovies(),
+            let amazonPrimeMovies =  amazonPrimeMovies.allMovies(),
+            let huluMovies = huluMovies.allMovies(),
+            let itunesMovies = itunesMovies.allMovies() else { return }
+        moviesArray.append(amazonPrimeMovies)
+        moviesArray.append(netflixMovies)
+        moviesArray.append(itunesMovies)
+        moviesArray.append(huluMovies)
+        /*
+         print(netflixMovies)
+         print("----------")
+         print(amazonPrimeMovies)
+         print("----------")
+         print(huluMovies)*/
     }
     
     var collectionView: UICollectionView? {
@@ -109,13 +88,8 @@ extension HomeController: UICollectionViewDataSource {
         let identifier = String(describing: DOExploreHeaderView.self)
         let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: identifier, for: indexPath)
         let header = reusableView as? DOExploreHeaderView
-        
-        print("Current section: \(indexPath.section), Index: \(indexPath.item)")
-        if  headerNames.indices.contains(indexPath.item) {
-            if indexPath.section != 0 {
-                header?.titleLabel.text =  headerNames[indexPath.section - 1]
-            }
-        }
+        header?.titleLabel.text = headerNames[indexPath.section]
+        print(headerNames[indexPath.section])
         return reusableView
     }
     
@@ -130,11 +104,8 @@ extension HomeController: UICollectionViewDataSource {
         if indexPath.section == 0 {
             exploreCell?.imageView.contentMode = .scaleAspectFill
         }
-        
-        if moviesArray.indices.contains(indexPath.section)  {
-            let url = URL(string: moviesArray[indexPath.section][indexPath.item].poster400X570)
-            exploreCell?.imageView.kf.setImage(with: url)
-        }
+        let url = URL(string: moviesArray[indexPath.section][indexPath.item].poster400X570)
+        exploreCell?.imageView.kf.setImage(with: url)
         
         return cell
     }
@@ -146,7 +117,7 @@ extension HomeController: UICollectionViewDataSource {
     
     func numberOfSections(in _: UICollectionView) -> Int {
         // The first section is the scroll display.
-        return 5
+        return 4
     }
 }
 
