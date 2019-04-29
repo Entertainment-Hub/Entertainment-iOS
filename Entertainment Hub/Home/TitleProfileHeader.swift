@@ -16,10 +16,19 @@ class TitleProfileHeader: UICollectionViewCell {
         didSet {
             guard let result = self.result else { return }
             guard let url = URL(string: result.poster400X570) else { return }
-            titleImageView.kf.setImage(with:url)
+            titleDisplayButton.kf.setImage(with: url, for: .normal)
             
             titleLabel.text = result.title + " " + "(\(result.releaseYear))"
             makeMetadataRequest()
+        }
+    }
+    
+    var movieData: MovieMetadata? {
+        didSet {
+            guard let movie = self.movieData else { return }
+            DispatchQueue.main.async {
+                self.titleDescription.text = movie.overview
+            }
         }
     }
 
@@ -29,17 +38,15 @@ class TitleProfileHeader: UICollectionViewCell {
         movie.movieMetadata(ID: String(result.id)) { (metadata, error) in
             guard let metadata = metadata else { return }
             print(metadata.overview)
-            
-            DispatchQueue.main.async {
-                self.titleDescription.text = metadata.overview
-            }
+            self.movieData = metadata
         }
         
     }
     
-    let titleImageView: UIImageView = {
-        let imageView = UIImageView()
-        return imageView
+    lazy var titleDisplayButton: UIButton = {
+        let titleButton = UIButton(type: .custom)
+        titleButton.addTarget(self, action: #selector(displayWebPurchases), for: .touchUpInside)
+        return titleButton
     }()
     
     let titleLabel: UILabel = {
@@ -94,6 +101,10 @@ class TitleProfileHeader: UICollectionViewCell {
         return button
     }()
     
+    @objc fileprivate func displayWebPurchases() {
+        print(movieData?.purchaseWebSources)
+    }
+    
     @objc fileprivate func handleimdb() {
         guard let titleID = result?.imdb else { return }
         let path = "https://www.imdb.com/title/" + titleID
@@ -130,19 +141,19 @@ class TitleProfileHeader: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(titleImageView)
+        addSubview(titleDisplayButton)
         addSubview(titleLabel)
         addSubview(titleDescription)
         
-        titleImageView.anchor(top: topAnchor, bottom: nil, left: leftAnchor, right: nil, paddingTop: 12, paddingBottom: 0, paddingLeft: 12, paddingRight: 0, width: 80, height: 130)
-        titleImageView.clipsToBounds = true
+        titleDisplayButton.anchor(top: topAnchor, bottom: nil, left: leftAnchor, right: nil, paddingTop: 12, paddingBottom: 0, paddingLeft: 12, paddingRight: 0, width: 80, height: 130)
+        titleDisplayButton.clipsToBounds = true
         
         setupBottomToolbar()
         
         titleLabel.anchor(top: nil, bottom: imdbButton.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 50)
         
         //UIImageViewsetupUserStats()
-        titleDescription.anchor(top: titleImageView.topAnchor, bottom: titleLabel.topAnchor, left: titleImageView.rightAnchor, right: self.rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 8, paddingRight: 6, width: 0, height: 0)
+        titleDescription.anchor(top: titleDisplayButton.topAnchor, bottom: titleLabel.topAnchor, left: titleDisplayButton.rightAnchor, right: self.rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 8, paddingRight: 6, width: 0, height: 0)
     }
     
     fileprivate func setupBottomToolbar() {
