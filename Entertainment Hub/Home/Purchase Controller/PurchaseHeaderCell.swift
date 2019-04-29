@@ -11,11 +11,14 @@ import UIKit
 
 class PurchaseHeaderCell: UICollectionViewCell {
 
-    let sourceLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        return label
+    
+    
+    lazy var sourceButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        //button.addTarget(self, action: #selector(handleWiki), for: .touchUpInside)
+        return button
     }()
     
     
@@ -25,9 +28,9 @@ class PurchaseHeaderCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(sourceLabel)
+        addSubview(sourceButton)
        
-        sourceLabel.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 0)
+        sourceButton.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 0)
     }
 
 }

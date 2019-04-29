@@ -46,6 +46,7 @@
 		4C599C7322775D02003A7904 /* MovieMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C7222775D02003A7904 /* MovieMetadata.swift */; };
 		4CA461DE2277AF1E00437BAB /* PurchaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */; };
 		4CA461E02277BE3C00437BAB /* PurchaseHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */; };
+		4CA461E22277C28D00437BAB /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461E12277C28D00437BAB /* PurchaseCell.swift */; };
 		4CB0D7272276898D007B99DC /* SubscriptionShowFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */; };
 		4CCDDBD02276766600D95470 /* iTunes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBCF2276766600D95470 /* iTunes.json */; };
 		4CCDDBD2227679AA00D95470 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD1227679AA00D95470 /* Subscription.swift */; };
@@ -99,6 +100,7 @@
 		4C599C7222775D02003A7904 /* MovieMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMetadata.swift; sourceTree = "<group>"; };
 		4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableController.swift; sourceTree = "<group>"; };
 		4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHeaderCell.swift; sourceTree = "<group>"; };
+		4CA461E12277C28D00437BAB /* PurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
 		4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionShowFormat.swift; sourceTree = "<group>"; };
 		4CCDDBCF2276766600D95470 /* iTunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = iTunes.json; sourceTree = "<group>"; };
 		4CCDDBD1227679AA00D95470 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			children = (
 				4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */,
 				4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */,
+				4CA461E12277C28D00437BAB /* PurchaseCell.swift */,
 			);
 			path = "Purchase Controller";
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				4C191B032221D15F00D1577D /* DOExploreCollectionLayoutDelegate.swift in Sources */,
 				4C191B042221D15F00D1577D /* DOExploreCollectionViewLayoutAttributes.swift in Sources */,
 				4C0A112422760B0E003AA71E /* SubscriptionService.swift in Sources */,
+				4CA461E22277C28D00437BAB /* PurchaseCell.swift in Sources */,
 				4C191B052221D15F00D1577D /* DOExplorePagerView.swift in Sources */,
 				4C191B062221D15F00D1577D /* DOScrollView.swift in Sources */,
 				4C191AE02221AED800D1577D /* SettingsController.swift in Sources */,

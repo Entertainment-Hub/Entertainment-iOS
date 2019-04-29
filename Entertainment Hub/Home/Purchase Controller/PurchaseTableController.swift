@@ -28,7 +28,7 @@ class PurchaseTableController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(PurchaseCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(PurchaseHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
 }
@@ -39,7 +39,7 @@ extension PurchaseTableController {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! PurchaseHeaderCell
         header.backgroundColor = .purple
         guard let websources = self.purchaseWebSources else { return header }
-        header.sourceLabel.text = websources[indexPath.section].displayName
+        header.sourceButton.setTitle(websources[indexPath.section].displayName, for: .normal)  
         return header
     }
     
@@ -50,8 +50,12 @@ extension PurchaseTableController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PurchaseCell
         cell.backgroundColor = .red
+        guard let websources = self.purchaseWebSources else { return cell }
+        let format = websources[indexPath.section].formats[indexPath.item]
+        let textOutput = format.type.capitalized + " \(format.format.uppercased()) " + "$\(format.price)"
+        cell.sourceFormatLabel.text = textOutput
         return cell
 
     }
