@@ -20,8 +20,7 @@ class MovieController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        collectionView.backgroundColor = UIColor.App.darkGray
     }
     
 }

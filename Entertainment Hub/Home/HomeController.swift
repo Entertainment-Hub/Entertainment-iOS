@@ -12,7 +12,7 @@ import Kingfisher
 
 class HomeController: UIViewController {    
     let request = RequestMovies()
-     
+    
     let netflix = Subscription(from: .netflix)
     let amazonPrime = Subscription(from: .amazonPrime)
     let itunes = Subscription(from: .itunes)
@@ -20,7 +20,14 @@ class HomeController: UIViewController {
     
     var headerNames = ["Amazon Prime", "Netflix", "iTunes", "Hulu"]
     var moviesArray = [[MovieResult]]()
-
+    var showsArray = [[ShowResult]]()
+    
+    lazy var segmentedControl: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["Movies","Shows"])
+        sc.selectedSegmentIndex = 0
+        return sc
+    }()
+    
     override func loadView() {
         view = UICollectionView(frame: .zero, collectionViewLayout: DOExploreCollectionLayout())
     }
@@ -39,8 +46,22 @@ class HomeController: UIViewController {
         layout?.stickyHero = true
         layout?.delegate = self
         
-       getMovies()
+        getMovies()
+        getShows()
+        setupSegmentedControl()
     }
+    
+    fileprivate func setupSegmentedControl() {
+        segmentedControl.addTarget(self, action: #selector(handleChange), for: .valueChanged)
+        self.view.addSubview(segmentedControl)
+        segmentedControl.anchor(top: self.view.topAnchor, bottom: nil, left: nil, right: nil, paddingTop: 220, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 150, height: 40)
+        segmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+    }
+    
+    @objc fileprivate func handleChange() {
+        collectionView?.reloadData()
+    }
+    
     
     fileprivate func getMovies() {
         guard let netflixMovies = netflix.allMovies(),
@@ -57,6 +78,16 @@ class HomeController: UIViewController {
          print(amazonPrimeMovies)
          print("----------")
          print(huluMovies)*/
+    }
+    fileprivate func getShows() {
+        guard let netflixShows = netflix.allShows(),
+            let amazonPrimeShows =  amazonPrime.allShows(),
+            let huluShows = hulu.allShows(),
+            let itunesShows = itunes.allShows() else { return }
+        showsArray.append(amazonPrimeShows)
+        showsArray.append(netflixShows)
+        showsArray.append(itunesShows)
+        showsArray.append(huluShows)
     }
     
     var collectionView: UICollectionView? {
@@ -88,6 +119,7 @@ extension HomeController: UICollectionViewDataSource {
         let identifier = String(describing: DOExploreHeaderView.self)
         let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: identifier, for: indexPath)
         let header = reusableView as? DOExploreHeaderView
+        //header?.backgroundColor = .red
         header?.titleLabel.text = headerNames[indexPath.section]
         print(headerNames[indexPath.section])
         return reusableView
@@ -104,7 +136,14 @@ extension HomeController: UICollectionViewDataSource {
         if indexPath.section == 0 {
             exploreCell?.imageView.contentMode = .scaleAspectFill
         }
-        let url = URL(string: moviesArray[indexPath.section][indexPath.item].poster400X570)
+        
+        var path = ""
+        if segmentedControl.selectedSegmentIndex == 0 {
+            path = moviesArray[indexPath.section][indexPath.item].poster400X570
+        } else {
+            path = showsArray[indexPath.section][indexPath.item].artwork608X342
+        }
+        let url = URL(string: path)
         exploreCell?.imageView.kf.setImage(with: url)
         
         return cell
@@ -138,12 +177,12 @@ extension HomeController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
