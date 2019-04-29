@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Kingfisher
+import MKProgress
 
 class HomeController: UIViewController {    
     let request = RequestMovies()
@@ -60,7 +61,12 @@ class HomeController: UIViewController {
     }
     
     @objc fileprivate func handleChange() {
-        collectionView?.reloadData()
+        MKProgress.show(after: 0.1, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            self.collectionView?.reloadData()
+            MKProgress.hide(true)
+        }
+       
     }
     
     fileprivate func getMovies() {
