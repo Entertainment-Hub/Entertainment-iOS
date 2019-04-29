@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "85DE80A608943D0BC9A7DB0434C9AE2B"
-               BlueprintName = "Pods-Entertainment Hub"
+               BlueprintIdentifier = "E202B1122C135A6AEBE84852508E0D7F"
+               BlueprintName = "MKProgress"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Entertainment Hub.framework">
+               BuildableName = "MKProgress.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

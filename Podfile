@@ -7,5 +7,5 @@ target 'Entertainment Hub' do
 
   # Pods for Entertainment Hub
   pod 'Kingfisher'
-  pod "SkeletonView"
+  pod 'MKProgress'
 end

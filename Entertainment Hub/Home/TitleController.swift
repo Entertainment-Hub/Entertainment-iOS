@@ -12,6 +12,10 @@ import UIKit
 
 class TitleController: UICollectionViewController {
 
+    let cellId = "cellId"
+    let headerId = "headerId"
+    let postCellId = "homePostCellId"
+    
     var results: MovieResult? {
         didSet {
             print(results?.originalTitle)

@@ -1,20 +1,20 @@
 PODS:
-  - Kingfisher (5.1.1)
-  - SkeletonView (1.4.2)
+  - Kingfisher (5.4.0)
+  - MKProgress (1.0.9)
 
 DEPENDENCIES:
   - Kingfisher
-  - SkeletonView
+  - MKProgress
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
-    - SkeletonView
+    - MKProgress
 
 SPEC CHECKSUMS:
-  Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
-  SkeletonView: c2523c3c8c6510e273e49a3bf364a434744c3914
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  MKProgress: 4fa8dd701b872c82b780c885d577f99c8848d584
 
-PODFILE CHECKSUM: a601862ee89024a0532c082c37f79dec24f9a582
+PODFILE CHECKSUM: a7eb372a6f3a28a7dfcd3980b1233990d538bb01
 
 COCOAPODS: 1.5.3
