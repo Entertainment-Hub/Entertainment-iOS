@@ -13,13 +13,13 @@ import Kingfisher
 class HomeController: UIViewController {    
     let request = RequestMovies()
      
-    let netflixMovies = SubscriptionMovies(from: .netflix)
-    let amazonPrimeMovies = SubscriptionMovies(from: .amazonPrime)
-    let itunesMovies = SubscriptionMovies(from: .itunes)
-    let huluMovies = SubscriptionMovies(from: .hulu)
+    let netflix = Subscription(from: .netflix)
+    let amazonPrime = Subscription(from: .amazonPrime)
+    let itunes = Subscription(from: .itunes)
+    let hulu = Subscription(from: .hulu)
     
     var headerNames = ["Amazon Prime", "Netflix", "iTunes", "Hulu"]
-    var moviesArray = [[MoviesResult]]()
+    var moviesArray = [[MovieResult]]()
 
     override func loadView() {
         view = UICollectionView(frame: .zero, collectionViewLayout: DOExploreCollectionLayout())
@@ -43,10 +43,10 @@ class HomeController: UIViewController {
     }
     
     fileprivate func getMovies() {
-        guard let netflixMovies = netflixMovies.allMovies(),
-            let amazonPrimeMovies =  amazonPrimeMovies.allMovies(),
-            let huluMovies = huluMovies.allMovies(),
-            let itunesMovies = itunesMovies.allMovies() else { return }
+        guard let netflixMovies = netflix.allMovies(),
+            let amazonPrimeMovies =  amazonPrime.allMovies(),
+            let huluMovies = hulu.allMovies(),
+            let itunesMovies = itunes.allMovies() else { return }
         moviesArray.append(amazonPrimeMovies)
         moviesArray.append(netflixMovies)
         moviesArray.append(itunesMovies)

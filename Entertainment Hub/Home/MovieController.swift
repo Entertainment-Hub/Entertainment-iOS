@@ -12,7 +12,7 @@ import UIKit
 
 class MovieController: UICollectionViewController {
 
-    var results: MoviesResult? {
+    var results: MovieResult? {
         didSet {
             print(results?.originalTitle)
         }

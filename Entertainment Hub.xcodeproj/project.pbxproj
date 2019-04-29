@@ -36,12 +36,17 @@
 		4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B092221D2AC00D1577D /* DOExploreCollectionCell.swift */; };
 		4C191B0C2221D2C600D1577D /* DOExploreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0B2221D2C600D1577D /* DOExploreHeaderView.swift */; };
 		4C191B0E2221DC2D00D1577D /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0D2221DC2D00D1577D /* MovieController.swift */; };
-		4C191B1022222CDD00D1577D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0F22222CDD00D1577D /* Subscription.swift */; };
+		4C191B1022222CDD00D1577D /* SubscriptionMovieFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C191B0F22222CDD00D1577D /* SubscriptionMovieFormat.swift */; };
 		4C191B1322222E0A00D1577D /* Netflix.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1222222E0A00D1577D /* Netflix.json */; };
 		4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1822222E5000D1577D /* Amazon Prime.json */; };
 		4C191B1B22222E6300D1577D /* Hulu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C191B1A22222E6300D1577D /* Hulu.json */; };
+		4CB0D7272276898D007B99DC /* SubscriptionShowFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */; };
 		4CCDDBD02276766600D95470 /* iTunes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBCF2276766600D95470 /* iTunes.json */; };
-		4CCDDBD2227679AA00D95470 /* SubscriptionMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD1227679AA00D95470 /* SubscriptionMovies.swift */; };
+		4CCDDBD2227679AA00D95470 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD1227679AA00D95470 /* Subscription.swift */; };
+		4CCDDBD6227685A300D95470 /* Amazon Prime Shows.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD5227685A300D95470 /* Amazon Prime Shows.json */; };
+		4CCDDBDC2276863900D95470 /* Netflix Shows.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBDB2276863900D95470 /* Netflix Shows.json */; };
+		4CCDDBDE2276865F00D95470 /* Hulu Shows.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBDD2276865F00D95470 /* Hulu Shows.json */; };
+		4CCDDBE0227686C300D95470 /* iTunes Shows.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBDF227686C300D95470 /* iTunes Shows.json */; };
 		5997C56B8C26F5B666F9BAC3 /* Pods_Entertainment_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,12 +83,17 @@
 		4C191B092221D2AC00D1577D /* DOExploreCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOExploreCollectionCell.swift; sourceTree = "<group>"; };
 		4C191B0B2221D2C600D1577D /* DOExploreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOExploreHeaderView.swift; sourceTree = "<group>"; };
 		4C191B0D2221DC2D00D1577D /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
-		4C191B0F22222CDD00D1577D /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		4C191B0F22222CDD00D1577D /* SubscriptionMovieFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionMovieFormat.swift; sourceTree = "<group>"; };
 		4C191B1222222E0A00D1577D /* Netflix.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Netflix.json; sourceTree = "<group>"; };
 		4C191B1822222E5000D1577D /* Amazon Prime.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime.json"; sourceTree = "<group>"; };
 		4C191B1A22222E6300D1577D /* Hulu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hulu.json; sourceTree = "<group>"; };
+		4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionShowFormat.swift; sourceTree = "<group>"; };
 		4CCDDBCF2276766600D95470 /* iTunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = iTunes.json; sourceTree = "<group>"; };
-		4CCDDBD1227679AA00D95470 /* SubscriptionMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionMovies.swift; sourceTree = "<group>"; };
+		4CCDDBD1227679AA00D95470 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		4CCDDBD5227685A300D95470 /* Amazon Prime Shows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Amazon Prime Shows.json"; sourceTree = "<group>"; };
+		4CCDDBDB2276863900D95470 /* Netflix Shows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Netflix Shows.json"; sourceTree = "<group>"; };
+		4CCDDBDD2276865F00D95470 /* Hulu Shows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Hulu Shows.json"; sourceTree = "<group>"; };
+		4CCDDBDF227686C300D95470 /* iTunes Shows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "iTunes Shows.json"; sourceTree = "<group>"; };
 		9296C959BDB09618F8365625 /* Pods-Entertainment Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE5552F804D5F15E4D27431 /* Pods-Entertainment Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entertainment Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entertainment Hub/Pods-Entertainment Hub.release.xcconfig"; sourceTree = "<group>"; };
 		E0CE4E11C0EB8EC25E2ABA9D /* Pods_Entertainment_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entertainment_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,9 +219,10 @@
 			children = (
 				4C191AED2221B3C600D1577D /* GuideBoxFreeMovies.swift */,
 				4C0A112522760E2B003AA71E /* GuideBox.swift */,
-				4C191B0F22222CDD00D1577D /* Subscription.swift */,
+				4C191B0F22222CDD00D1577D /* SubscriptionMovieFormat.swift */,
+				4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */,
 				4C0A112322760B0E003AA71E /* SubscriptionService.swift */,
-				4CCDDBD1227679AA00D95470 /* SubscriptionMovies.swift */,
+				4CCDDBD1227679AA00D95470 /* Subscription.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,12 +263,32 @@
 		4C191B1122222DDF00D1577D /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
+				4CCDDBD4227683A000D95470 /* Shows */,
+				4CCDDBD32276838A00D95470 /* Movies */,
+			);
+			path = JSONs;
+			sourceTree = "<group>";
+		};
+		4CCDDBD32276838A00D95470 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
 				4C191B1222222E0A00D1577D /* Netflix.json */,
 				4C191B1822222E5000D1577D /* Amazon Prime.json */,
 				4C191B1A22222E6300D1577D /* Hulu.json */,
 				4CCDDBCF2276766600D95470 /* iTunes.json */,
 			);
-			path = JSONs;
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		4CCDDBD4227683A000D95470 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				4CCDDBDB2276863900D95470 /* Netflix Shows.json */,
+				4CCDDBD5227685A300D95470 /* Amazon Prime Shows.json */,
+				4CCDDBDD2276865F00D95470 /* Hulu Shows.json */,
+				4CCDDBDF227686C300D95470 /* iTunes Shows.json */,
+			);
+			path = Shows;
 			sourceTree = "<group>";
 		};
 		667B3E0578C8D9063D5630F6 /* Frameworks */ = {
@@ -329,12 +360,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCDDBDE2276865F00D95470 /* Hulu Shows.json in Resources */,
 				4C191AEB2221B2C600D1577D /* Configuration.plist in Resources */,
 				4C191B1B22222E6300D1577D /* Hulu.json in Resources */,
+				4CCDDBDC2276863900D95470 /* Netflix Shows.json in Resources */,
 				4C191ACE2221A72500D1577D /* LaunchScreen.storyboard in Resources */,
+				4CCDDBD6227685A300D95470 /* Amazon Prime Shows.json in Resources */,
 				4CCDDBD02276766600D95470 /* iTunes.json in Resources */,
 				4C191ACB2221A72500D1577D /* Assets.xcassets in Resources */,
 				4C191B1322222E0A00D1577D /* Netflix.json in Resources */,
+				4CCDDBE0227686C300D95470 /* iTunes Shows.json in Resources */,
 				4C191AF92221CB5A00D1577D /* GLIndexedCollectionViewCell.xib in Resources */,
 				4C191B1922222E5000D1577D /* Amazon Prime.json in Resources */,
 			);
@@ -402,11 +437,12 @@
 				4C0A112622760E2B003AA71E /* GuideBox.swift in Sources */,
 				4C191AC42221A72400D1577D /* AppDelegate.swift in Sources */,
 				4C0A112822766899003AA71E /* SearchCell.swift in Sources */,
-				4C191B1022222CDD00D1577D /* Subscription.swift in Sources */,
+				4CB0D7272276898D007B99DC /* SubscriptionShowFormat.swift in Sources */,
+				4C191B1022222CDD00D1577D /* SubscriptionMovieFormat.swift in Sources */,
 				4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */,
 				4C191AF32221BDEC00D1577D /* GLIndexedCollectionViewCell.swift in Sources */,
 				4C191AE92221B29B00D1577D /* Extensions.swift in Sources */,
-				4CCDDBD2227679AA00D95470 /* SubscriptionMovies.swift in Sources */,
+				4CCDDBD2227679AA00D95470 /* Subscription.swift in Sources */,
 				4C191AEE2221B3C600D1577D /* GuideBoxFreeMovies.swift in Sources */,
 				4C191ADC2221AE4400D1577D /* SearchController.swift in Sources */,
 				4C191B0C2221D2C600D1577D /* DOExploreHeaderView.swift in Sources */,

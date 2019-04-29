@@ -16,3 +16,16 @@ enum SubscriptionName: String {
     case itunes = "iTunes"
 
 }
+
+protocol ShowPath {
+    var path : String { get }
+}
+
+extension SubscriptionName : ShowPath {
+    var path: String {
+        switch self {
+      default:
+            return self.rawValue + " Shows"
+        }
+    }
+}
