@@ -195,13 +195,6 @@ class TitleProfileHeader: UICollectionViewCell {
         bottomDividerView.anchor(top: stackView.bottomAnchor, bottom: nil, left: leftAnchor, right: rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: 0.5)
     }
     
-//    fileprivate func setupUserStats() {
-//        let stackView = UIStackView(arrangedSubviews: [postsLabel, followersLabel, followingLabel])
-//        stackView.distribution = .fillEqually
-//        addSubview(stackView)
-//        stackView.anchor(top: topAnchor, bottom: nil, left: titleImageView.rightAnchor, right: rightAnchor, paddingTop: 12, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 50)
-//    }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
