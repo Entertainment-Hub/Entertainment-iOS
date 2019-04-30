@@ -12,9 +12,12 @@ class TitlePhotoCell: UICollectionViewCell {
     
     var result: TitleResult? {
         didSet {
-            guard let poster = self.result?.poster400X570 else { return }
-            guard let imageURL = URL(string: poster) else { return }
-            photoImageView.kf.setImage(with:imageURL)
+            //artwork608X342
+            guard let result  = self.result else { return }
+            let artworkPath: String? = result.poster400X570  ?? result.artwork608X342
+            guard let path = artworkPath else { return }
+            guard let url = URL(string: path) else { return }
+            photoImageView.kf.setImage(with:url)
             
         }
     }

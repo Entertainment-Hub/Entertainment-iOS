@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class SettingsController: UICollectionViewController {
     
     let cellId = "cellId"

@@ -43,10 +43,8 @@ class TitleProfileHeader: UICollectionViewCell {
         }
     }
 
-    // TODO: FIX
     fileprivate func makeMetadataRequest() {
         let title = (isMovie) ? GuideBox.movies(.none) : GuideBox.shows(.none)
-        //self.isMovie = false
         guard let result = result else { return }
         title.titleMetadata(ID: String(result.id)) { (metadata, error) in
             guard let metadata = metadata else { return }
@@ -83,7 +81,6 @@ class TitleProfileHeader: UICollectionViewCell {
         label.textColor = .white
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
-        //label.text = "An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' Avengers: Infinity War brings to the screen the ultimate, deadliest showdown of all time. The Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe."
         return label
     }()
     
@@ -123,15 +120,17 @@ class TitleProfileHeader: UICollectionViewCell {
     }()
     
     @objc fileprivate func displayWebPurchases() {
-        //print(movieData?.purchaseWebSources)
-        let purchaseController = PurchaseTableController(collectionViewLayout: UICollectionViewFlowLayout())
-        guard let data = self.titleData else { return }
-        purchaseController.purchaseWebSources = data.purchaseWebSources
-        delegate?.navigationController?.pushViewController(purchaseController, animated: true)
+        //TODO: FIX
+        if isMovie {
+            let purchaseController = PurchaseTableController(collectionViewLayout: UICollectionViewFlowLayout())
+            guard let data = self.titleData else { return }
+            purchaseController.purchaseWebSources = data.purchaseWebSources
+            delegate?.navigationController?.pushViewController(purchaseController, animated: true)
+        }
     }
     
     @objc fileprivate func handleimdb() {
-        guard let titleID = result?.imdb else { return }
+        guard let titleID = (isMovie) ? result?.imdb : result?.imdbID else { return }
         let path = "https://www.imdb.com/title/" + titleID
         guard let url = URL(string: path) else { return }
         UIApplication.shared.open(url)
@@ -154,12 +153,12 @@ class TitleProfileHeader: UICollectionViewCell {
     }
     
     @objc fileprivate func handleCommon() {
-        guard let path = result?.commonSenseMedia else { return }
+        guard let path = (isMovie) ? result?.commonSenseMedia  : titleData?.commonSenseMedia else { return }
         guard let url = URL(string: path) else { return }
         UIApplication.shared.open(url)
     }
     @objc fileprivate func handleMeta() {
-        guard let path = result?.metacritic else { return }
+        guard let path = (isMovie) ? result?.metacritic : titleData?.metacritic else { return }
         guard let url = URL(string: path) else { return }
         UIApplication.shared.open(url)
     }
