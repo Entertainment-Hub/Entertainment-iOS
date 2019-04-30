@@ -169,6 +169,10 @@ extension HomeController: UICollectionViewDelegate {
         let titleController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
         let selectedSegmentIndex = segmentedControl.selectedSegmentIndex == 0
         titleController.result = (selectedSegmentIndex) ? moviesArray[indexPath.section][indexPath.item] : showsArray[indexPath.section][indexPath.item]
+        
+        if indexPath.section == 0 {
+            titleController.result = showsArray[indexPath.section][indexPath.item]
+        }
         navigationController?.pushViewController(titleController, animated: true)        
     }
 }

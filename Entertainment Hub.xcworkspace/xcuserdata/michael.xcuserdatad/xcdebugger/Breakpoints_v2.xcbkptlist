@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/TitleController/TitleProfileHeader.swift"
-            timestampString = "578334447.909256"
+            timestampString = "578334974.063122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -215,7 +215,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/Purchase Controller/PurchaseTableController.swift"
-            timestampString = "578334447.909395"
+            timestampString = "578334974.063261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -231,7 +231,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/Purchase Controller/PurchaseTableController.swift"
-            timestampString = "578334447.909467"
+            timestampString = "578334974.063349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -247,7 +247,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/TitleController/TitleProfileHeader.swift"
-            timestampString = "578334447.909531"
+            timestampString = "578334974.063411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -295,7 +295,7 @@
                   moduleName = "Entertainment Hub"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Model/Subscription.swift"
-                  timestampString = "578333925.357857"
+                  timestampString = "578334675.725279"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "93"
@@ -310,7 +310,7 @@
                   moduleName = "Entertainment Hub"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Model/Subscription.swift"
-                  timestampString = "578333925.361536"
+                  timestampString = "578334675.730787"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "93"
@@ -318,6 +318,22 @@
                   offsetFromSymbolStart = "2054">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Entertainment Hub/Home/TitleController/TitlePhotoCell.swift"
+            timestampString = "578334675.42812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "result"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
