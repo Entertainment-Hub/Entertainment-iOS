@@ -97,11 +97,16 @@ extension SearchController {
         searchBar.resignFirstResponder()
         
         
-//        print(indexPath.section, indexPath.item)
-//        let result = filteredResults[indexPath.item]
-//        let titleController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
-//        titleController.result = result
-//        navigationController?.pushViewController(titleController, animated: true)
+        print(indexPath.section, indexPath.item)
+        let result = filteredResults[indexPath.item]
+        let titleController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        
+        /* Not Ideal, FIX */
+        let titleResult = TitleResult(id: result.id, title: result.title, alternateTitles: result.alternateTitles, containerShow: result.containerShow, firstAired: nil, imdbID: result.imdbID, tvdb: result.tvdb, themoviedb: result.themoviedb, freebase: result.freebase, wikipediaID: result.wikipediaID, tvrage: nil, artwork208X117: result.artwork208X117, artwork304X171: result.artwork304X171, artwork448X252: result.artwork448X252, artwork608X342: result.artwork608X342, releaseYear: result.releaseYear, originalTitle: result.originalTitle, imdb: result.imdb, preOrder: result.preOrder, inTheaters: result.inTheaters, releaseDate: result.releaseDate, rating: result.rating, rottentomatoes: result.rottentomatoes, metacritic: result.metacritic, commonSenseMedia: result.commonSenseMedia, poster120X171: result.poster120X171, poster240X342: result.poster240X342, poster400X570: result.poster400X570)
+        
+        titleController.result = titleResult
+        navigationController?.pushViewController(titleController, animated: true)
  
     }
 }
