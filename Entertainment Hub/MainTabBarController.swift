@@ -32,7 +32,7 @@ class MainTabBarController: UITabBarController {
         let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: UserProfileController())
         
         // Settings
-        let settingsNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Settings"), selectedImage: #imageLiteral(resourceName: "Settings"), rootViewController: SettingsController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let settingsNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Settings"), selectedImage: #imageLiteral(resourceName: "Settings"), rootViewController: SettingsController())
         
         
         modifyTabBarAppearance()
