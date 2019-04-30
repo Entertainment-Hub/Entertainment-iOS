@@ -3,72 +3,6 @@
     "total_returned":25,
     "results":[
         {
-            "id":703,
-            "title":"The Walking Dead",
-            "alternate_titles":[
-                
-            ],
-            "container_show":0,
-            "first_aired":"2010-10-31",
-            "imdb_id":"tt1520211",
-            "tvdb":153021,
-            "themoviedb":1402,
-            "freebase":"\/m\/0c3xpwy",
-            "wikipedia_id":27676616,
-            "tvrage":{
-                "tvrage_id":25056,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-25056"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_small\/703-3422100935-208x117-show-thumbnail.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/703-3368183603-304x171-show-thumbnail.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/703-4248968759-448x252-show-thumbnail.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/703-7681273194-608x342-show-thumbnail.jpg"
-        },
-        {
-            "id":41317,
-            "title":"Lemony Snicket's A Series of Unfortunate Events",
-            "alternate_titles":[
-                "A Series of Unfortunate Events"
-            ],
-            "container_show":0,
-            "first_aired":"2017-01-08",
-            "imdb_id":"tt4834206",
-            "tvdb":306304,
-            "themoviedb":65294,
-            "freebase":null,
-            "wikipedia_id":49732269,
-            "tvrage":{
-                "tvrage_id":null,
-                "link":null
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_small\/41317-9209324191-208x117.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_medium\/41317-1171019054-304x171.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_large\/41317-7409853055-448x252.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_xlarge\/41317-5859806933-608x342.jpg"
-        },
-        {
-            "id":6959,
-            "title":"Game of Thrones",
-            "alternate_titles":[
-                
-            ],
-            "container_show":0,
-            "first_aired":"2011-04-17",
-            "imdb_id":"tt0944947",
-            "tvdb":121361,
-            "themoviedb":1399,
-            "freebase":"\/m\/0524b41",
-            "wikipedia_id":20715044,
-            "tvrage":{
-                "tvrage_id":24493,
-                "link":"http:\/\/www.tvrage.com\/shows\/id-24493"
-            },
-            "artwork_208x117":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_small\/6959-7755267811-208x117.jpg",
-            "artwork_304x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_medium\/6959-8255587010-304x171.jpg",
-            "artwork_448x252":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_large\/6959-7500693383-448x252.jpg",
-            "artwork_608x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_xlarge\/6959-423900909-608x342.jpg"
-        },
-        {
             "id":38948,
             "title":"Westworld",
             "alternate_titles":[
@@ -200,6 +134,72 @@
             "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/13015-7129820809-304x171-show-thumbnail.jpg",
             "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/13015-2719832999-448x252-show-thumbnail.jpg",
             "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/13015-6382877868-608x342-show-thumbnail.jpg"
+        },
+        {
+            "id":703,
+            "title":"The Walking Dead",
+            "alternate_titles":[
+                
+            ],
+            "container_show":0,
+            "first_aired":"2010-10-31",
+            "imdb_id":"tt1520211",
+            "tvdb":153021,
+            "themoviedb":1402,
+            "freebase":"\/m\/0c3xpwy",
+            "wikipedia_id":27676616,
+            "tvrage":{
+                "tvrage_id":25056,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-25056"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_small\/703-3422100935-208x117-show-thumbnail.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_medium\/703-3368183603-304x171-show-thumbnail.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_large\/703-4248968759-448x252-show-thumbnail.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091414\/thumbnails_xlarge\/703-7681273194-608x342-show-thumbnail.jpg"
+        },
+        {
+            "id":41317,
+            "title":"Lemony Snicket's A Series of Unfortunate Events",
+            "alternate_titles":[
+                "A Series of Unfortunate Events"
+            ],
+            "container_show":0,
+            "first_aired":"2017-01-08",
+            "imdb_id":"tt4834206",
+            "tvdb":306304,
+            "themoviedb":65294,
+            "freebase":null,
+            "wikipedia_id":49732269,
+            "tvrage":{
+                "tvrage_id":null,
+                "link":null
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_small\/41317-9209324191-208x117.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_medium\/41317-1171019054-304x171.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_large\/41317-7409853055-448x252.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/091716\/thumbnails_xlarge\/41317-5859806933-608x342.jpg"
+        },
+        {
+            "id":6959,
+            "title":"Game of Thrones",
+            "alternate_titles":[
+                
+            ],
+            "container_show":0,
+            "first_aired":"2011-04-17",
+            "imdb_id":"tt0944947",
+            "tvdb":121361,
+            "themoviedb":1399,
+            "freebase":"\/m\/0524b41",
+            "wikipedia_id":20715044,
+            "tvrage":{
+                "tvrage_id":24493,
+                "link":"http:\/\/www.tvrage.com\/shows\/id-24493"
+            },
+            "artwork_208x117":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_small\/6959-7755267811-208x117.jpg",
+            "artwork_304x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_medium\/6959-8255587010-304x171.jpg",
+            "artwork_448x252":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_large\/6959-7500693383-448x252.jpg",
+            "artwork_608x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_xlarge\/6959-423900909-608x342.jpg"
         },
         {
             "id":18768,
