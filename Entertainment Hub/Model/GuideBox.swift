@@ -102,7 +102,7 @@ extension GuideBox: Moya {
         return components
     }
     
-    func searchComponents(query: String) -> URLComponents {
+    func searchShowComponents(query: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
@@ -111,6 +111,21 @@ extension GuideBox: Moya {
         components.queryItems =  [
             URLQueryItem(name: "api_key", value: self.apiKey),
             URLQueryItem(name: "type", value: "show"),
+            URLQueryItem(name: "field", value: "title"),
+            URLQueryItem(name: "query", value: query),
+        ]
+        return components
+    }
+    
+    func searchMovieComponents(query: String) -> URLComponents {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = self.path
+        
+        components.queryItems =  [
+            URLQueryItem(name: "api_key", value: self.apiKey),
+            URLQueryItem(name: "type", value: "movie"),
             URLQueryItem(name: "field", value: "title"),
             URLQueryItem(name: "query", value: query),
         ]
@@ -154,8 +169,26 @@ extension GuideBox: Moya {
             }.resume()
     }
     
-    func showSearch(query: String, completion: @escaping (_ annotations: [SearchResult]?, _ error: Error?) -> Void) {
-        guard let url = self.searchComponents(query: query).url else { return  }
+    func searchShows(query: String, completion: @escaping (_ annotations: [SearchResult]?, _ error: Error?) -> Void) {
+        guard let url = self.searchShowComponents(query: query).url else { return  }
+        print("---")
+        print(url)
+        print("---")
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else { return }
+            do {
+                let decoder = JSONDecoder()
+                let searchFormat = try decoder.decode(ShowSearchFormat.self, from: data)
+                completion(searchFormat.results, nil)
+                
+            } catch let error as NSError {
+                completion([], error)
+            }
+            }.resume()
+    }
+    
+    func searchMovies(query: String, completion: @escaping (_ annotations: [SearchResult]?, _ error: Error?) -> Void) {
+        guard let url = self.searchMovieComponents(query: query).url else { return  }
         print("---")
         print(url)
         print("---")

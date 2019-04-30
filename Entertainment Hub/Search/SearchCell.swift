@@ -13,7 +13,10 @@ class SearchCell: UICollectionViewCell {
     var result: SearchResult? {
         didSet {
             guard let result = self.result else { return }
-            guard let url = URL(string: result.artwork608X342) else { return }
+            
+            let artworkPath: String? = result.artwork608X342 ?? result.poster400X570
+            guard let path = artworkPath else { return }
+            guard let url = URL(string:path) else { return }
             profileImageView.kf.setImage(with:url)
             titleLabel.text = result.title
         }

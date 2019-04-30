@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MKProgress
 
 class SearchController: UICollectionViewController {
     
@@ -17,7 +18,7 @@ class SearchController: UICollectionViewController {
     
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "Enter Show Name"
+        searchBar.placeholder = "Search for movies & more"
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.rgb(red: 230, green: 230, blue: 230)
         searchBar.delegate = self
         return searchBar
@@ -36,19 +37,24 @@ class SearchController: UICollectionViewController {
         //searchShow(query: "How")
     }
     
-    fileprivate func searchShow(query: String) {
-        let show = GuideBox.search(.none)
-        show.showSearch(query: query) { (searchResult, erroe) in
-            guard let results = searchResult else { return }
-            print("the results are: \(results.count)")
-       
-            DispatchQueue.main.async {
-                self.results = results
-                self.filteredResults = self.results
-                self.collectionView.reloadData()
-            }
+    fileprivate func searchMoviesAndShows(query: String) {
+        MKProgress.show(after: 0.1, animated: true)
+        let box = GuideBox.search(.none)
+        box.searchShows(query: query) { (searchResult, erroe) in
+            guard let searchResults = searchResult else { return }
+            print("the results are: \(searchResults.count)")
+            box.searchMovies(query: query, completion: { (movieResult, error) in
+                guard let movieResults = movieResult else { return }
+                DispatchQueue.main.async {
+                    MKProgress.hide(true)
+                    self.results = searchResults + movieResults
+                    self.filteredResults = self.results
+                    self.collectionView.reloadData()
+                }
+            })
         }
     }
+    
     fileprivate func fetchShowJSON() {
         let shows = Subscription(from: .none)
         guard let searchShows = shows.allSearchShows() else { return }
@@ -117,7 +123,7 @@ extension SearchController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
         if !text.isEmpty {
-            self.searchShow(query: text)
+            self.searchMoviesAndShows(query: text)
         }
         
     }
