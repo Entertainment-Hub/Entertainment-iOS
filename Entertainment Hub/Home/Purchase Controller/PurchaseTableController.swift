@@ -19,7 +19,7 @@ class PurchaseTableController: UICollectionViewController {
     
     var purchaseWebSources: [SubPurchaseWebSource]? {
         didSet {
-            guard let sources = self.purchaseWebSources else { return }
+            guard self.purchaseWebSources != nil else { return }
             self.collectionView.reloadData()
         }
     }

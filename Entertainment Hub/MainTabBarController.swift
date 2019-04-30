@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController {
         let searchNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         // Library
-        let libraryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Library"), selectedImage: #imageLiteral(resourceName: "Library"), rootViewController: LibraryController(collectionViewLayout: UICollectionViewFlowLayout()))
+        //let libraryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Library"), selectedImage: #imageLiteral(resourceName: "Library"), rootViewController: LibraryController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         // User Profile
         let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: UserProfileController())

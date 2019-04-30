@@ -18,7 +18,7 @@ class TitleController: UICollectionViewController {
     
     var result: TitleResult? {
         didSet {
-            print(result?.originalTitle)
+            //print(result?.originalTitle)
         }
     }
     

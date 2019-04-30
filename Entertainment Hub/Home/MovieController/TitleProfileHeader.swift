@@ -119,7 +119,7 @@ class TitleProfileHeader: UICollectionViewCell {
     }()
     
     @objc fileprivate func displayWebPurchases() {
-        print(movieData?.purchaseWebSources)
+        //print(movieData?.purchaseWebSources)
         let purchaseController = PurchaseTableController(collectionViewLayout: UICollectionViewFlowLayout())
         guard let movieData = self.movieData else { return }
         purchaseController.purchaseWebSources = movieData.purchaseWebSources
