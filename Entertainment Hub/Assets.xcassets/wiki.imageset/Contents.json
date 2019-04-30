@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "wiki.jpg",
+      "filename" : "wiki.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "wiki@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "wiki@3x.png",
       "scale" : "3x"
     }
   ],
