@@ -29,6 +29,8 @@ class TitleProfileHeader: UICollectionViewCell {
                 titleLabel.text?.append(String(releaseYear))
                 /* Only Movies have a release Year */
                 isMovie = true
+            } else {
+                rottenButton.setImage(#imageLiteral(resourceName: "tv"), for: .normal)
             }
             makeMetadataRequest()
         }
@@ -144,11 +146,17 @@ class TitleProfileHeader: UICollectionViewCell {
     }
     
     @objc fileprivate func handleRotten() {
-        guard let titleID = result?.rottentomatoes else { return }
-        print(titleID)
-        let path = "https://www.rottentomatoes.com/m/" + "\(titleID)"
-        print(path)
-        guard let url = URL(string: path) else { return }
+        let path: String?
+        if isMovie {
+            guard let titleID = result?.rottentomatoes else { return }
+            print(titleID)
+            path = "https://www.rottentomatoes.com/m/" + "\(titleID)"
+        } else {
+            path = titleData?.tvCOM
+        }
+       
+        guard let validPath = path else { return }
+        guard let url = URL(string: validPath) else { return }
         UIApplication.shared.open(url)
     }
     
@@ -177,7 +185,6 @@ class TitleProfileHeader: UICollectionViewCell {
         
         titleLabel.anchor(top: nil, bottom: imdbButton.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 12, paddingRight: 12, width: 0, height: 50)
         
-        //UIImageViewsetupUserStats()
         titleDescription.anchor(top: titleDisplayButton.topAnchor, bottom: titleLabel.topAnchor, left: titleDisplayButton.rightAnchor, right: self.rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 8, paddingRight: 6, width: 0, height: 0)
         
         playButton.anchor(top: nil, bottom: nil, left: nil, right: nil, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 45, height: 45)
