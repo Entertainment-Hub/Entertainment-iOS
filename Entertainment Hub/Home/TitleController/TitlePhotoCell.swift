@@ -24,7 +24,6 @@ class TitlePhotoCell: UICollectionViewCell {
     
     let photoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
     }()
