@@ -8,13 +8,14 @@
 
 import UIKit
 
-class UserSearchCell: UICollectionViewCell {
+class SearchCell: UICollectionViewCell {
     
-    var user: String? {
+    var result: SearchResult? {
         didSet {
-//            titleLabel.text = user?.username
-//            guard let profileImageURL = user?.profileImageUrl else { return }
-//            profileImageView.loadImage(urlString: profileImageURL)
+            guard let result = self.result else { return }
+            guard let url = URL(string: result.artwork608X342) else { return }
+            profileImageView.kf.setImage(with:url)
+            titleLabel.text = result.title
         }
     }
     
@@ -27,7 +28,8 @@ class UserSearchCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Username"
+        label.text = "Sample Title"
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()

@@ -11,6 +11,7 @@ import Foundation
 enum GuideBox {
     case movies(SubscriptionName)
     case shows(SubscriptionName)
+    case search(SubscriptionName)
 }
 
 protocol Path {
@@ -23,6 +24,7 @@ extension GuideBox : Path {
         switch self {
         case .movies: return "/v2/movies"
         case .shows: return "/v2/shows"
+        case .search: return "/v2/search"
         }
     }
     
@@ -45,7 +47,8 @@ extension GuideBox : Path {
         switch self {
         case .movies(let subscriptionName): return service(name: subscriptionName.rawValue)
         case .shows(let subscriptionName): return service(name: subscriptionName.rawValue)
-
+            
+        case .search(let subscriptionName): return service(name: subscriptionName.rawValue)
         }
     }
 }
@@ -99,6 +102,21 @@ extension GuideBox: Moya {
         return components
     }
     
+    func searchComponents(query: String) -> URLComponents {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = self.path
+        
+        components.queryItems =  [
+            URLQueryItem(name: "api_key", value: self.apiKey),
+            URLQueryItem(name: "type", value: "show"),
+            URLQueryItem(name: "field", value: "title"),
+            URLQueryItem(name: "query", value: query),
+        ]
+        return components
+    }
+    
     
     func get(completion: @escaping (_ annotations: [MovieResult], _ error: Error?) -> Void) {
         guard let url = self.components.url else { return  }
@@ -134,6 +152,25 @@ extension GuideBox: Moya {
                 completion(nil, error)
             }
             }.resume()
-        
     }
+    
+    func showSearch(query: String, completion: @escaping (_ annotations: [SearchResult]?, _ error: Error?) -> Void) {
+        guard let url = self.searchComponents(query: query).url else { return  }
+        print("---")
+        print(url)
+        print("---")
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else { return }
+            do {
+                let decoder = JSONDecoder()
+                let searchFormat = try decoder.decode(ShowSearchFormat.self, from: data)
+                completion(searchFormat.results, nil)
+                
+            } catch let error as NSError {
+                completion([], error)
+            }
+            }.resume()
+    }
+    
+    
 }

@@ -13,10 +13,16 @@ class Subscription {
     
     var subscriptionMovieResponse: SubscriptionMovieFormat?
     var subscriptionShowResponse: SubscriptionShowFormat?
+    var showSearchFormat: ShowSearchFormat?
 
     init(from: SubscriptionName) {
         subscriptionMovieResponse = readMovieJSON(resource: from.rawValue)
         subscriptionShowResponse = readShowJSON(resource: from.path)
+        
+        /* Read the Search JSON if necessary */
+        if from == .none {
+            showSearchFormat = readShowSearchJSON()
+        }
     }
     
     
@@ -27,8 +33,13 @@ class Subscription {
     
     
     func allShows() -> [ShowResult]? {
-        guard let subscription = subscriptionShowResponse else { return nil}
-        return subscription.results
+        guard let showResponse = subscriptionShowResponse else { return nil}
+        return showResponse.results
+    }
+    
+    func allSearchShows() -> [SearchResult]? {
+        guard let searchResponse = showSearchFormat else { return nil}
+        return searchResponse.results
     }
 
     
@@ -61,6 +72,23 @@ class Subscription {
             let jsonDecoder = JSONDecoder()
             let subscription =  try jsonDecoder.decode(SubscriptionShowFormat.self, from: data)
             return subscription
+            
+        } catch { print(error.localizedDescription)}
+        return nil
+    }
+    
+    /* Show Search JSON */
+    private func readShowSearchJSON(resource: String = "Sample Search") -> ShowSearchFormat? {
+        guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else {
+            print("COULD NOT FIND FILE")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: fileURL)
+            let jsonDecoder = JSONDecoder()
+            let showSearchFormat =  try jsonDecoder.decode(ShowSearchFormat.self, from: data)
+            return showSearchFormat
             
         } catch { print(error.localizedDescription)}
         return nil

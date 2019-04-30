@@ -51,53 +51,5 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Entertainment Hub/Search/SearchCell.swift"
-            timestampString = "578277947.8166"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "user"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Entertainment_Hub.UserSearchCell.user.modify : Swift.Optional&lt;Swift.String&gt;"
-                  moduleName = "Entertainment Hub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Search/SearchCell.swift"
-                  timestampString = "578277948.10665"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "26">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Entertainment_Hub.UserSearchCell.user.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Entertainment Hub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Search/SearchCell.swift"
-                  timestampString = "578277948.11209"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

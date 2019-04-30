@@ -12,9 +12,12 @@ class SearchController: UICollectionViewController {
     
     let cellId = "cellId"
     
+    var results = [SearchResult]()
+    var filteredResults = [SearchResult]()
+    
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "Enter Username"
+        searchBar.placeholder = "Enter Show Name"
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.rgb(red: 230, green: 230, blue: 230)
         searchBar.delegate = self
         return searchBar
@@ -22,41 +25,37 @@ class SearchController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = UIColor.App.gray
         collectionView.alwaysBounceVertical = true
         collectionView.keyboardDismissMode = .onDrag
         
         setupSearchBar()
-        collectionView.register(UserSearchCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(SearchCell.self, forCellWithReuseIdentifier: cellId)
         
-        fetchUsers()
+        fetchShowJSON()
+        //searchShow(query: "How")
     }
     
-    fileprivate func fetchUsers() {
-//        let ref = Database.database().reference().child("users")
-//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//            
-//            guard let dictionaries = snapshot.value as? [String: Any] else { return }
-//            dictionaries.forEach({ (key, value) in
-//                
-//                if key == Auth.auth().currentUser?.uid {
-//                    // Omit the current user
-//                    return
-//                }
-//                guard let userDictionary = value as? [String: Any] else { return }
-//                let user = User(uid: key, dictionary: userDictionary)
-//                self.users.append(user)
-//            })
-//            
-//            self.users.sort(by: { (user1, user2) -> Bool in
-//                return user1.username.compare(user2.username) == .orderedAscending
-//            })
-//            
-//            self.filteredUsers = self.users
-//            self.collectionView.reloadData()
-//        }) { (error) in
-//            print("Failed to fetch users, ", error)
-//        }
+    fileprivate func searchShow(query: String) {
+        let show = GuideBox.search(.none)
+        show.showSearch(query: query) { (searchResult, erroe) in
+            guard let results = searchResult else { return }
+            print("the results are: \(results.count)")
+       
+            DispatchQueue.main.async {
+                self.results = results
+                self.filteredResults = self.results
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    fileprivate func fetchShowJSON() {
+        let shows = Subscription(from: .none)
+        guard let searchShows = shows.allSearchShows() else { return }
+        print(searchShows.count)
+        self.results = searchShows
+        self.filteredResults = self.results
+        self.collectionView.reloadData()
     }
     
     fileprivate func setupSearchBar() {
@@ -74,13 +73,13 @@ class SearchController: UICollectionViewController {
 // MARK: UICollectionViewDataSource
 extension SearchController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return filteredResults.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserSearchCell
-        //cell.user = self.filteredUsers[indexPath.item]
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchCell
+        cell.result = self.filteredResults[indexPath.item]
+        cell.backgroundColor = .clear
         return cell
     }
 }
@@ -106,12 +105,20 @@ extension SearchController: UICollectionViewDelegateFlowLayout {
 extension SearchController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            //filteredUsers = users
+            filteredResults = results
         } else {
-//            self.filteredUsers = self.users.filter { (user) -> Bool in
-//                return user.username.lowercased().contains(searchText.lowercased())
-//            }
+            self.filteredResults = self.results.filter { (result) -> Bool in
+                return result.title.lowercased().contains(searchText.lowercased())
+            }
         }
         self.collectionView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else { return }
+        if !text.isEmpty {
+            self.searchShow(query: text)
+        }
+        
     }
 }

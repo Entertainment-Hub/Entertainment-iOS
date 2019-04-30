@@ -47,6 +47,9 @@
 		4CA461DE2277AF1E00437BAB /* PurchaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */; };
 		4CA461E02277BE3C00437BAB /* PurchaseHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */; };
 		4CA461E22277C28D00437BAB /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461E12277C28D00437BAB /* PurchaseCell.swift */; };
+		4CA461E62277D88700437BAB /* Sample Search.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA461E52277D88700437BAB /* Sample Search.json */; };
+		4CA461E82277D89300437BAB /* Friends Search.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA461E72277D89300437BAB /* Friends Search.json */; };
+		4CA461EA2277D95B00437BAB /* ShowSearchFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461E92277D95B00437BAB /* ShowSearchFormat.swift */; };
 		4CB0D7272276898D007B99DC /* SubscriptionShowFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */; };
 		4CCDDBD02276766600D95470 /* iTunes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDDBCF2276766600D95470 /* iTunes.json */; };
 		4CCDDBD2227679AA00D95470 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDBD1227679AA00D95470 /* Subscription.swift */; };
@@ -101,6 +104,9 @@
 		4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableController.swift; sourceTree = "<group>"; };
 		4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHeaderCell.swift; sourceTree = "<group>"; };
 		4CA461E12277C28D00437BAB /* PurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
+		4CA461E52277D88700437BAB /* Sample Search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Sample Search.json"; sourceTree = "<group>"; };
+		4CA461E72277D89300437BAB /* Friends Search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Friends Search.json"; sourceTree = "<group>"; };
+		4CA461E92277D95B00437BAB /* ShowSearchFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearchFormat.swift; sourceTree = "<group>"; };
 		4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionShowFormat.swift; sourceTree = "<group>"; };
 		4CCDDBCF2276766600D95470 /* iTunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = iTunes.json; sourceTree = "<group>"; };
 		4CCDDBD1227679AA00D95470 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 				4C191B0F22222CDD00D1577D /* SubscriptionMovieFormat.swift */,
 				4CB0D7262276898D007B99DC /* SubscriptionShowFormat.swift */,
 				4C599C7222775D02003A7904 /* MovieMetadata.swift */,
+				4CA461E92277D95B00437BAB /* ShowSearchFormat.swift */,
 				4CCDDBD1227679AA00D95470 /* Subscription.swift */,
 			);
 			path = Model;
@@ -281,6 +288,8 @@
 			children = (
 				4CCDDBD4227683A000D95470 /* Shows */,
 				4CCDDBD32276838A00D95470 /* Movies */,
+				4CA461E52277D88700437BAB /* Sample Search.json */,
+				4CA461E72277D89300437BAB /* Friends Search.json */,
 			);
 			path = JSONs;
 			sourceTree = "<group>";
@@ -397,12 +406,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA461E82277D89300437BAB /* Friends Search.json in Resources */,
 				4CCDDBDE2276865F00D95470 /* Hulu Shows.json in Resources */,
 				4C191AEB2221B2C600D1577D /* Configuration.plist in Resources */,
 				4C191B1B22222E6300D1577D /* Hulu.json in Resources */,
 				4CCDDBDC2276863900D95470 /* Netflix Shows.json in Resources */,
 				4C191ACE2221A72500D1577D /* LaunchScreen.storyboard in Resources */,
 				4CCDDBD6227685A300D95470 /* Amazon Prime Shows.json in Resources */,
+				4CA461E62277D88700437BAB /* Sample Search.json in Resources */,
 				4CCDDBD02276766600D95470 /* iTunes.json in Resources */,
 				4C191ACB2221A72500D1577D /* Assets.xcassets in Resources */,
 				4C191B1322222E0A00D1577D /* Netflix.json in Resources */,
@@ -461,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C191B012221D15F00D1577D /* DOExploreCollectionLayout.h in Sources */,
+				4CA461EA2277D95B00437BAB /* ShowSearchFormat.swift in Sources */,
 				4C599C6F227748DA003A7904 /* TitlePhotoCell.swift in Sources */,
 				4C191B022221D15F00D1577D /* DOExploreCollectionLayout.swift in Sources */,
 				4C191B0E2221DC2D00D1577D /* TitleController.swift in Sources */,
