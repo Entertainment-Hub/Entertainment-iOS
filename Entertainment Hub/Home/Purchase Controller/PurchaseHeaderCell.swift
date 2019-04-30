@@ -11,15 +11,22 @@ import UIKit
 
 class PurchaseHeaderCell: UICollectionViewCell {
 
-    
+
+    var servicePath: String?
     
     lazy var sourceButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        //button.addTarget(self, action: #selector(handleWiki), for: .touchUpInside)
+        button.addTarget(self, action: #selector(redirectToService), for: .touchUpInside)
         return button
     }()
+    
+    @objc fileprivate func redirectToService() {
+        print(servicePath!)
+        guard let serviceURL = URL(string: servicePath!) else { return }
+        UIApplication.shared.open(serviceURL)
+    }
     
     
     required init?(coder aDecoder: NSCoder) {

@@ -39,7 +39,9 @@ extension PurchaseTableController {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! PurchaseHeaderCell
         header.backgroundColor = .purple
         guard let websources = self.purchaseWebSources else { return header }
-        header.sourceButton.setTitle(websources[indexPath.section].displayName, for: .normal)  
+        header.sourceButton.setTitle(websources[indexPath.section].displayName, for: .normal)
+        header.servicePath = websources[indexPath.section].link
+//        print(websources[indexPath.section].link)
         return header
     }
     
