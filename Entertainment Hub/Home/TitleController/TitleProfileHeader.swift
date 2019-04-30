@@ -128,6 +128,11 @@ class TitleProfileHeader: UICollectionViewCell {
             guard let data = self.titleData else { return }
             purchaseController.purchaseWebSources = data.purchaseWebSources
             delegate?.navigationController?.pushViewController(purchaseController, animated: true)
+        } else {
+            /* Not suited for mobile */
+//            guard let validPath = titleData?.url else { return }
+//            guard let url = URL(string: validPath) else { return }
+//            UIApplication.shared.open(url)
         }
     }
     
