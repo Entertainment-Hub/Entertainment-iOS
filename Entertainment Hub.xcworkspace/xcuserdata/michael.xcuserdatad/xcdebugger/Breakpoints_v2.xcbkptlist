@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Model/GuideBox.swift"
-            timestampString = "578331526.028322"
+            timestampString = "578332263.8647799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/TitleController/TitleProfileHeader.swift"
-            timestampString = "578331526.028414"
+            timestampString = "578332263.865158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -142,6 +142,21 @@
                   endingLineNumber = "41"
                   offsetFromSymbolStart = "84">
                </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Entertainment_Hub.TitleProfileHeader.titleData.didset : Swift.Optional&lt;Entertainment_Hub.TitleMetadata&gt;"
+                  moduleName = "eval104.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Home/TitleController/TitleProfileHeader.swift"
+                  timestampString = "578332006.147995"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "84">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -152,7 +167,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Model/GuideBox.swift"
-            timestampString = "578331526.028554"
+            timestampString = "578332263.865222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
@@ -168,7 +183,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Model/GuideBox.swift"
-            timestampString = "578331526.0286241"
+            timestampString = "578332263.8655469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
@@ -184,7 +199,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Model/GuideBox.swift"
-            timestampString = "578331526.028675"
+            timestampString = "578332263.865802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
@@ -200,7 +215,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/Purchase Controller/PurchaseTableController.swift"
-            timestampString = "578331528.6320029"
+            timestampString = "578332263.8660541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -216,7 +231,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/Purchase Controller/PurchaseTableController.swift"
-            timestampString = "578331576.70963"
+            timestampString = "578332263.8661129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -232,75 +247,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Entertainment Hub/Home/TitleController/TitleProfileHeader.swift"
-            timestampString = "578331597.795657"
+            timestampString = "578332263.866158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
             endingLineNumber = "128"
             landmarkName = "displayWebPurchases()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Entertainment_Hub.TitleProfileHeader.(displayWebPurchases in _A20B509E04EA07F19C85BA28F2EEEA2E)() -&gt; ()"
-                  moduleName = "Entertainment Hub"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Home/TitleController/TitleProfileHeader.swift"
-                  timestampString = "578331598.151037"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Entertainment_Hub.TitleProfileHeader.(displayWebPurchases in _A20B509E04EA07F19C85BA28F2EEEA2E)() -&gt; ()"
-                  moduleName = "eval101.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Home/TitleController/TitleProfileHeader.swift"
-                  timestampString = "578331598.153338"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Entertainment_Hub.TitleProfileHeader.(displayWebPurchases in _A20B509E04EA07F19C85BA28F2EEEA2E)() -&gt; ()"
-                  moduleName = "eval102.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Home/TitleController/TitleProfileHeader.swift"
-                  timestampString = "578331598.155338"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Entertainment_Hub.TitleProfileHeader.(displayWebPurchases in _A20B509E04EA07F19C85BA28F2EEEA2E)() -&gt; ()"
-                  moduleName = "eval103.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/michael/Entertainment-iOS/Entertainment%20Hub/Home/TitleController/TitleProfileHeader.swift"
-                  timestampString = "578331619.145929"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "144">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

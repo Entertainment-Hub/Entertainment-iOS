@@ -95,10 +95,14 @@ extension SearchController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         searchBar.isHidden = true
         searchBar.resignFirstResponder()
-        //let user = filteredUsers[indexPath.item]
-        //let userProfileController = UserProfileController(collectionViewLayout: UICollectionViewFlowLayout())
-        //userProfileController.user = user
-        //navigationController?.pushViewController(userProfileController, animated: true)
+        
+        
+//        print(indexPath.section, indexPath.item)
+//        let result = filteredResults[indexPath.item]
+//        let titleController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
+//        titleController.result = result
+//        navigationController?.pushViewController(titleController, animated: true)
+ 
     }
 }
 
