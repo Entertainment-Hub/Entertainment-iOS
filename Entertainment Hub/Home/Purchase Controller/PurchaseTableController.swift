@@ -58,7 +58,11 @@ extension PurchaseTableController {
         guard let websources = self.purchaseWebSources else { return cell }
         guard let formats = websources[indexPath.section].formats else { return cell}
         let format = formats[indexPath.item]
-        let textOutput = format.type!.capitalized + " \(format.format!.uppercased()) " + "$\(format.price!)"
+        print(format)
+        guard let type = format.type,
+            let quality = format.format,
+            let price = format.price else { return cell }
+        let textOutput = type.capitalized + " \(quality.uppercased()) " + "$\(price)"
         cell.sourceFormatLabel.text = textOutput
         return cell
 

@@ -50,7 +50,7 @@ class TitleProfileHeader: UICollectionViewCell {
         guard let result = result else { return }
         title.titleMetadata(ID: String(result.id)) { (metadata, error) in
             guard let metadata = metadata else { return }
-            print(metadata.overview)
+            //print(metadata.overview)
             self.titleData = metadata
         }
         
@@ -125,8 +125,8 @@ class TitleProfileHeader: UICollectionViewCell {
     @objc fileprivate func displayWebPurchases() {
         //print(movieData?.purchaseWebSources)
         let purchaseController = PurchaseTableController(collectionViewLayout: UICollectionViewFlowLayout())
-        guard let movieData = self.titleData else { return }
-        purchaseController.purchaseWebSources = movieData.purchaseWebSources
+        guard let data = self.titleData else { return }
+        purchaseController.purchaseWebSources = data.purchaseWebSources
         delegate?.navigationController?.pushViewController(purchaseController, animated: true)
     }
     
