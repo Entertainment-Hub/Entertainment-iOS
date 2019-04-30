@@ -52,6 +52,14 @@ class TitleProfileHeader: UICollectionViewCell {
         return titleButton
     }()
     
+    lazy var playButton: UIButton = {
+        let playButton = UIButton(type: .custom)
+        playButton.addTarget(self, action: #selector(displayWebPurchases), for: .touchUpInside)
+        playButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        playButton.alpha = 0.6
+        return playButton
+    }()
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 15)
@@ -151,6 +159,7 @@ class TitleProfileHeader: UICollectionViewCell {
         addSubview(titleDisplayButton)
         addSubview(titleLabel)
         addSubview(titleDescription)
+        titleDisplayButton.addSubview(playButton)
         
         titleDisplayButton.anchor(top: topAnchor, bottom: nil, left: leftAnchor, right: nil, paddingTop: 12, paddingBottom: 0, paddingLeft: 12, paddingRight: 0, width: 80, height: 130)
         titleDisplayButton.clipsToBounds = true
@@ -161,6 +170,12 @@ class TitleProfileHeader: UICollectionViewCell {
         
         //UIImageViewsetupUserStats()
         titleDescription.anchor(top: titleDisplayButton.topAnchor, bottom: titleLabel.topAnchor, left: titleDisplayButton.rightAnchor, right: self.rightAnchor, paddingTop: 4, paddingBottom: 0, paddingLeft: 8, paddingRight: 6, width: 0, height: 0)
+        
+        playButton.anchor(top: nil, bottom: nil, left: nil, right: nil, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 45, height: 45)
+        playButton.centerYAnchor.constraint(equalTo: titleDisplayButton.centerYAnchor).isActive = true
+        playButton.centerXAnchor.constraint(equalTo: titleDisplayButton.centerXAnchor).isActive = true
+
+        
     }
     
     fileprivate func setupBottomToolbar() {
