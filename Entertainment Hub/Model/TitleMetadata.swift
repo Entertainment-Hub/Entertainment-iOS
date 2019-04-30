@@ -7,36 +7,36 @@
 //
 
 import Foundation
-/*
+
 struct TitleMetadata: Codable {
-    let id: Int
-    let title: String
+    let id: Int?
+    let title: String?
     let releaseYear: Int?
-    let themoviedb: Int
+    let themoviedb: Int?
     let originalTitle: String?
-    let alternateTitles: [String]
+    let alternateTitles: [String]?
     let imdb: String?
     let preOrder: Bool?
     let inTheaters: Bool?
     let releaseDate: String?
-    let rating: String
+    let rating: String?
     let rottentomatoes: Int?
-    let freebase: String
-    let wikipediaID: Int
-    let metacritic: String
-    let commonSenseMedia: String
-    let overview: String
+    let freebase: String?
+    let wikipediaID: Int?
+    let metacritic: String?
+    let commonSenseMedia: String?
+    let overview: String?
     let poster120X171: String?
     let poster240X342: String?
     let poster400X570: String?
-    let social: SubTitleMetadataSocial
-    let genres: [SubGenre]
-    let tags: [SubTag]
+    let social: Social?
+    let genres: [Genre]?
+    let tags: [Tag]?
     let duration: Int?
-    let trailers: SubTrailers?
-    let writers: [SubDirector]?
-    let directors: [SubDirector]?
-    let cast: [SubCast]
+    let trailers: Trailers?
+    let writers: [Director]?
+    let directors: [Director]?
+    let cast: [Cast]?
     let freeWebSources: [JSONAny]?
     let freeIosSources: [JSONAny]?
     let freeAndroidSources: [JSONAny]?
@@ -46,23 +46,23 @@ struct TitleMetadata: Codable {
     let subscriptionWebSources: [SubscriptionWebSource]?
     let subscriptionIosSources: [SubscriptionIosSource]?
     let subscriptionAndroidSources: [SubscriptionAndroidSource]?
-    let purchaseWebSources: [SubPurchaseWebSource]?
-    let purchaseIosSources: [SubPurchaseIosSource]?
-    let purchaseAndroidSources: [SubPurchaseAndroidSource]?
-    let otherSources: SubOtherSourcesUnion?
+    let purchaseWebSources: [PurchaseWebSource]?
+    let purchaseIosSources: [PurchaseIosSource]?
+    let purchaseAndroidSources: [PurchaseAndroidSource]?
+    let otherSources: OtherSourcesUnion?
     let status: String?
     let type: String?
     let containerShow: Int?
     let firstAired: String?
     let network: String?
-    let channels: [SubChannel]?
+    let channels: [Channel]?
     let runtime: Int?
     let airDayOfWeek: String?
     let airTime: String?
     let imdbID: String?
     let tvdb: Int?
     let tvCOM: String?
-    let tvrage: SubTvrage?
+    let tvrage: TitleTvRange?
     let fanart: String?
     let poster: String?
     let banner: String?
@@ -138,12 +138,12 @@ struct TitleMetadata: Codable {
     }
 }
 
-struct SubCast: Codable {
-    let id: Int
-    let name: String
-    let characterName: String
+struct Cast: Codable {
+    let id: Int?
+    let name: String?
+    let characterName: String?
     let imdb: String?
-    let image: String
+    let image: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -154,19 +154,19 @@ struct SubCast: Codable {
     }
 }
 
-struct SubChannel: Codable {
-    let id: Int
-    let name: String
-    let shortName: String
-    let channelType: String
-    let artwork208X117: String
-    let artwork304X171: String
-    let artwork448X252: String
-    let artwork608X342: String
-    let externalIDS: SubExternalIDS
-    let social: SubChannelSocial
-    let liveStream: SubLiveStream
-    let isPrimary: Int
+struct Channel: Codable {
+    let id: Int?
+    let name: String?
+    let shortName: String?
+    let channelType: String?
+    let artwork208X117: String?
+    let artwork304X171: String?
+    let artwork448X252: String?
+    let artwork608X342: String?
+    let externalIDS: ExternalIDS?
+    let social: Social?
+    let liveStream: LiveStream?
+    let isPrimary: Int?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -184,9 +184,9 @@ struct SubChannel: Codable {
     }
 }
 
-struct SubExternalIDS: Codable {
-    let imdb: String
-    let wikipediaID: Int
+struct ExternalIDS: Codable {
+    let imdb: String?
+    let wikipediaID: Int?
     
     enum CodingKeys: String, CodingKey {
         case imdb = "imdb"
@@ -194,10 +194,10 @@ struct SubExternalIDS: Codable {
     }
 }
 
-struct SubLiveStream: Codable {
-    let web: [SubWeb]
-    let ios: [JSONAny]
-    let android: [JSONAny]
+struct LiveStream: Codable {
+    let web: [Web]?
+    let ios: [JSONAny]?
+    let android: [JSONAny]?
     
     enum CodingKeys: String, CodingKey {
         case web = "web"
@@ -206,13 +206,13 @@ struct SubLiveStream: Codable {
     }
 }
 
-struct SubWeb: Codable {
-    let source: String
-    let displayName: String
+struct Web: Codable {
+    let source: String?
+    let displayName: String?
     let tvChannel: JSONNull?
-    let type: String
-    let link: String
-    let linkType: String
+    let type: String?
+    let link: String?
+    let linkType: String?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -224,9 +224,9 @@ struct SubWeb: Codable {
     }
 }
 
-struct SubChannelSocial: Codable {
-    let facebook: SubFacebook
-    let twitter: SubTwitter
+struct Social: Codable {
+    let facebook: Facebook?
+    let twitter: Twitter?
     
     enum CodingKeys: String, CodingKey {
         case facebook = "facebook"
@@ -234,9 +234,9 @@ struct SubChannelSocial: Codable {
     }
 }
 
-struct SubFacebook: Codable {
-    let facebookID: Int
-    let link: String
+struct Facebook: Codable {
+    let facebookID: Int?
+    let link: String?
     
     enum CodingKeys: String, CodingKey {
         case facebookID = "facebook_id"
@@ -244,9 +244,9 @@ struct SubFacebook: Codable {
     }
 }
 
-struct SubTwitter: Codable {
-    let twitterID: Int
-    let link: String
+struct Twitter: Codable {
+    let twitterID: Int?
+    let link: String?
     
     enum CodingKeys: String, CodingKey {
         case twitterID = "twitter_id"
@@ -254,10 +254,10 @@ struct SubTwitter: Codable {
     }
 }
 
-struct SubDirector: Codable {
-    let id: Int
-    let name: String
-    let imdb: String
+struct Director: Codable {
+    let id: Int?
+    let name: String?
+    let imdb: String?
     let image: String?
     
     enum CodingKeys: String, CodingKey {
@@ -268,9 +268,9 @@ struct SubDirector: Codable {
     }
 }
 
-struct SubGenre: Codable {
-    let id: Int
-    let title: String
+struct Genre: Codable {
+    let id: Int?
+    let title: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -278,9 +278,9 @@ struct SubGenre: Codable {
     }
 }
 
-enum SubOtherSourcesUnion: Codable {
+enum OtherSourcesUnion: Codable {
     case anythingArray([JSONAny])
-    case subOtherSourcesClass(SubOtherSourcesClass)
+    case otherSourcesClass(OtherSourcesClass)
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -288,11 +288,11 @@ enum SubOtherSourcesUnion: Codable {
             self = .anythingArray(x)
             return
         }
-        if let x = try? container.decode(SubOtherSourcesClass.self) {
-            self = .subOtherSourcesClass(x)
+        if let x = try? container.decode(OtherSourcesClass.self) {
+            self = .otherSourcesClass(x)
             return
         }
-        throw DecodingError.typeMismatch(SubOtherSourcesUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for SubOtherSourcesUnion"))
+        throw DecodingError.typeMismatch(OtherSourcesUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for OtherSourcesUnion"))
     }
     
     func encode(to encoder: Encoder) throws {
@@ -300,26 +300,26 @@ enum SubOtherSourcesUnion: Codable {
         switch self {
         case .anythingArray(let x):
             try container.encode(x)
-        case .subOtherSourcesClass(let x):
+        case .otherSourcesClass(let x):
             try container.encode(x)
         }
     }
 }
 
-struct SubOtherSourcesClass: Codable {
-    let movieTheater: [SubMovieTheater]
+struct OtherSourcesClass: Codable {
+    let movieTheater: [MovieTheater]?
     
     enum CodingKeys: String, CodingKey {
         case movieTheater = "movie_theater"
     }
 }
 
-struct SubMovieTheater: Codable {
-    let source: String
-    let sourceType: String
-    let displayName: String
-    let link: String
-    let platform: String
+struct MovieTheater: Codable {
+    let source: String?
+    let sourceType: String?
+    let displayName: String?
+    let link: String?
+    let platform: String?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -330,15 +330,15 @@ struct SubMovieTheater: Codable {
     }
 }
 
-struct SubPurchaseAndroidSource: Codable {
-    let source: String
-    let displayName: String
-    let link: String
-    let appName: String
-    let appLink: Int
-    let appRequired: Int
-    let appDownloadLink: String
-    let formats: [SubFormat]
+struct PurchaseAndroidSource: Codable {
+    let source: String?
+    let displayName: String?
+    let link: String?
+    let appName: String?
+    let appLink: Int?
+    let appRequired: Int?
+    let appDownloadLink: String?
+    let formats: [Format]?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -352,11 +352,11 @@ struct SubPurchaseAndroidSource: Codable {
     }
 }
 
-struct SubFormat: Codable {
-    let price: String
-    let format: String
-    let type: String
-    let preOrder: Bool
+struct Format: Codable {
+    let price: String?
+    let format: String?
+    let type: String?
+    let preOrder: Bool?
     
     enum CodingKeys: String, CodingKey {
         case price = "price"
@@ -366,15 +366,15 @@ struct SubFormat: Codable {
     }
 }
 
-struct SubPurchaseIosSource: Codable {
-    let source: String
-    let displayName: String
-    let link: String
-    let appName: String
-    let appLink: Int
-    let appRequired: Int
-    let appDownloadLink: String
-    let formats: [SubFormat]
+struct PurchaseIosSource: Codable {
+    let source: String?
+    let displayName: String?
+    let link: String?
+    let appName: String?
+    let appLink: Int?
+    let appRequired: Int?
+    let appDownloadLink: String?
+    let formats: [Format]?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -388,11 +388,11 @@ struct SubPurchaseIosSource: Codable {
     }
 }
 
-struct SubPurchaseWebSource: Codable {
-    let source: String
-    let displayName: String
-    let link: String
-    let formats: [SubFormat]
+struct PurchaseWebSource: Codable {
+    let source: String?
+    let displayName: String?
+    let link: String?
+    let formats: [Format]?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -402,24 +402,14 @@ struct SubPurchaseWebSource: Codable {
     }
 }
 
-struct SubTitleMetadataSocial: Codable {
-    let facebook: SubFacebook
-    let twitter: SubTwitter?
-    
-    enum CodingKeys: String, CodingKey {
-        case facebook = "facebook"
-        case twitter = "twitter"
-    }
-}
-
 struct SubscriptionAndroidSource: Codable {
-    let source: String
-    let displayName: String
-    let link: String
-    let appName: String
-    let appLink: Int
-    let appRequired: Int
-    let appDownloadLink: String
+    let source: String?
+    let displayName: String?
+    let link: String?
+    let appName: String?
+    let appLink: Int?
+    let appRequired: Int?
+    let appDownloadLink: String?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -433,13 +423,13 @@ struct SubscriptionAndroidSource: Codable {
 }
 
 struct SubscriptionIosSource: Codable {
-    let source: String
-    let displayName: String
-    let link: String
-    let appName: String
-    let appLink: Int
-    let appRequired: Int
-    let appDownloadLink: String
+    let source: String?
+    let displayName: String?
+    let link: String?
+    let appName: String?
+    let appLink: Int?
+    let appRequired: Int?
+    let appDownloadLink: String?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -453,9 +443,9 @@ struct SubscriptionIosSource: Codable {
 }
 
 struct SubscriptionWebSource: Codable {
-    let source: String
-    let displayName: String
-    let link: String
+    let source: String?
+    let displayName: String?
+    let link: String?
     
     enum CodingKeys: String, CodingKey {
         case source = "source"
@@ -464,9 +454,9 @@ struct SubscriptionWebSource: Codable {
     }
 }
 
-struct SubTag: Codable {
-    let id: Int
-    let tag: String
+struct Tag: Codable {
+    let id: Int?
+    let tag: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -474,10 +464,10 @@ struct SubTag: Codable {
     }
 }
 
-struct SubTrailers: Codable {
-    let web: [JSONAny]
-    let ios: [JSONAny]
-    let android: [JSONAny]
+struct Trailers: Codable {
+    let web: [JSONAny]?
+    let ios: [JSONAny]?
+    let android: [JSONAny]?
     
     enum CodingKeys: String, CodingKey {
         case web = "web"
@@ -486,9 +476,9 @@ struct SubTrailers: Codable {
     }
 }
 
-struct SubTvrage: Codable {
-    let tvrageID: Int
-    let link: String
+struct TitleTvRange: Codable {
+    let tvrageID: Int?
+    let link: String?
     
     enum CodingKeys: String, CodingKey {
         case tvrageID = "tvrage_id"
@@ -736,4 +726,4 @@ class JSONAny: Codable {
         }
     }
 }
-*/
+

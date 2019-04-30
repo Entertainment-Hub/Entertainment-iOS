@@ -151,7 +151,7 @@ extension GuideBox: Moya {
             }.resume()
     }
     
-    func movieMetadata(ID:String, completion: @escaping (_ annotations: MovieMetadata?, _ error: Error?) -> Void) {
+    func titleMetadata(ID:String, completion: @escaping (_ annotations: TitleMetadata?, _ error: Error?) -> Void) {
         guard let url = self.setMetaComponents(ID: ID).url else { return  }
         print("---")
         print(url)
@@ -160,10 +160,11 @@ extension GuideBox: Moya {
             guard let data = data, error == nil else { return }
             do {
                 let decoder = JSONDecoder()
-                let metaData = try decoder.decode(MovieMetadata.self, from: data)
+                let metaData = try decoder.decode(TitleMetadata.self, from: data)
                 completion(metaData, nil)
                 
             } catch let error as NSError {
+                print(error)
                 completion(nil, error)
             }
             }.resume()

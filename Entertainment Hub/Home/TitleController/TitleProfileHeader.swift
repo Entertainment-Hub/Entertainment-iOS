@@ -14,6 +14,7 @@ class TitleProfileHeader: UICollectionViewCell {
     
     weak var delegate:TitleController?
 
+    var isMovie: Bool = false
     
     var result: TitleResult? {
         didSet {
@@ -26,28 +27,31 @@ class TitleProfileHeader: UICollectionViewCell {
             titleLabel.text = result.title + " "
             if let releaseYear = result.releaseYear {
                 titleLabel.text?.append(String(releaseYear))
+                /* Only Movies have a release Year */
+                isMovie = true
             }
             makeMetadataRequest()
         }
     }
     
-    var movieData: MovieMetadata? {
+    var titleData: TitleMetadata? {
         didSet {
-            guard let movie = self.movieData else { return }
+            guard let data = self.titleData else { return }
             DispatchQueue.main.async {
-                self.titleDescription.text = movie.overview
+                self.titleDescription.text = data.overview
             }
         }
     }
 
     // TODO: FIX
     fileprivate func makeMetadataRequest() {
-        let movie = GuideBox.movies(.none)
+        let title = (isMovie) ? GuideBox.movies(.none) : GuideBox.shows(.none)
+        //self.isMovie = false
         guard let result = result else { return }
-        movie.movieMetadata(ID: String(result.id)) { (metadata, error) in
+        title.titleMetadata(ID: String(result.id)) { (metadata, error) in
             guard let metadata = metadata else { return }
             print(metadata.overview)
-            self.movieData = metadata
+            self.titleData = metadata
         }
         
     }
@@ -121,7 +125,7 @@ class TitleProfileHeader: UICollectionViewCell {
     @objc fileprivate func displayWebPurchases() {
         //print(movieData?.purchaseWebSources)
         let purchaseController = PurchaseTableController(collectionViewLayout: UICollectionViewFlowLayout())
-        guard let movieData = self.movieData else { return }
+        guard let movieData = self.titleData else { return }
         purchaseController.purchaseWebSources = movieData.purchaseWebSources
         delegate?.navigationController?.pushViewController(purchaseController, animated: true)
     }

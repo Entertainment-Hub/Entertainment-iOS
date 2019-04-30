@@ -17,7 +17,7 @@ class PurchaseTableController: UICollectionViewController {
     let cellId = "cellId"
     let headerId = "headerId"
     
-    var purchaseWebSources: [SubPurchaseWebSource]? {
+    var purchaseWebSources: [PurchaseWebSource]? {
         didSet {
             guard self.purchaseWebSources != nil else { return }
             self.collectionView.reloadData()
@@ -47,16 +47,18 @@ extension PurchaseTableController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let websources = self.purchaseWebSources else { return 0}
-        return websources[section].formats.count
+        guard let websources = self.purchaseWebSources else { return 0 }
+        guard let formats = websources[section].formats else { return 0 }
+        return formats.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PurchaseCell
         cell.backgroundColor = .clear
         guard let websources = self.purchaseWebSources else { return cell }
-        let format = websources[indexPath.section].formats[indexPath.item]
-        let textOutput = format.type.capitalized + " \(format.format.uppercased()) " + "$\(format.price)"
+        guard let formats = websources[indexPath.section].formats else { return cell}
+        let format = formats[indexPath.item]
+        let textOutput = format.type!.capitalized + " \(format.format!.uppercased()) " + "$\(format.price!)"
         cell.sourceFormatLabel.text = textOutput
         return cell
 

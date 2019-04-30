@@ -43,7 +43,6 @@
 		4C599C6D22774637003A7904 /* TitleProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C6C22774637003A7904 /* TitleProfileHeader.swift */; };
 		4C599C6F227748DA003A7904 /* TitlePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C6E227748DA003A7904 /* TitlePhotoCell.swift */; };
 		4C599C7122774988003A7904 /* TitlePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C7022774988003A7904 /* TitlePostCell.swift */; };
-		4C599C7322775D02003A7904 /* MovieMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C599C7222775D02003A7904 /* MovieMetadata.swift */; };
 		4CA461DE2277AF1E00437BAB /* PurchaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */; };
 		4CA461E02277BE3C00437BAB /* PurchaseHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */; };
 		4CA461E22277C28D00437BAB /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA461E12277C28D00437BAB /* PurchaseCell.swift */; };
@@ -99,7 +98,6 @@
 		4C599C6C22774637003A7904 /* TitleProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleProfileHeader.swift; sourceTree = "<group>"; };
 		4C599C6E227748DA003A7904 /* TitlePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePhotoCell.swift; sourceTree = "<group>"; };
 		4C599C7022774988003A7904 /* TitlePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePostCell.swift; sourceTree = "<group>"; };
-		4C599C7222775D02003A7904 /* MovieMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMetadata.swift; sourceTree = "<group>"; };
 		4CA461DD2277AF1E00437BAB /* PurchaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableController.swift; sourceTree = "<group>"; };
 		4CA461DF2277BE3C00437BAB /* PurchaseHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHeaderCell.swift; sourceTree = "<group>"; };
 		4CA461E12277C28D00437BAB /* PurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 				4C0A112522760E2B003AA71E /* GuideBox.swift */,
 				4C0A112322760B0E003AA71E /* SubscriptionService.swift */,
 				4C191B0F22222CDD00D1577D /* SubscriptionFormat.swift */,
-				4C599C7222775D02003A7904 /* MovieMetadata.swift */,
 				4CA461EB22780D3F00437BAB /* TitleMetadata.swift */,
 				4CA461E92277D95B00437BAB /* ShowSearchFormat.swift */,
 				4CCDDBD1227679AA00D95470 /* Subscription.swift */,
@@ -485,7 +482,6 @@
 				4CA461DE2277AF1E00437BAB /* PurchaseTableController.swift in Sources */,
 				4C191AC42221A72400D1577D /* AppDelegate.swift in Sources */,
 				4C0A112822766899003AA71E /* SearchCell.swift in Sources */,
-				4C599C7322775D02003A7904 /* MovieMetadata.swift in Sources */,
 				4C191B1022222CDD00D1577D /* SubscriptionFormat.swift in Sources */,
 				4C191B0A2221D2AC00D1577D /* DOExploreCollectionCell.swift in Sources */,
 				4C191AF32221BDEC00D1577D /* GLIndexedCollectionViewCell.swift in Sources */,
