@@ -15,13 +15,18 @@ class TitleProfileHeader: UICollectionViewCell {
     weak var delegate:TitleController?
 
     
-    var result: MovieResult? {
+    var result: TitleResult? {
         didSet {
             guard let result = self.result else { return }
-            guard let url = URL(string: result.poster400X570) else { return }
+            let artworkPath: String? = result.artwork608X342 ?? result.poster400X570
+            guard let path = artworkPath else { return }
+            guard let url = URL(string:path) else { return }
             titleDisplayButton.kf.setImage(with: url, for: .normal)
             
-            titleLabel.text = result.title + " " + "(\(result.releaseYear))"
+            titleLabel.text = result.title + " "
+            if let releaseYear = result.releaseYear {
+                titleLabel.text?.append(String(releaseYear))
+            }
             makeMetadataRequest()
         }
     }
@@ -35,6 +40,7 @@ class TitleProfileHeader: UICollectionViewCell {
         }
     }
 
+    // TODO: FIX
     fileprivate func makeMetadataRequest() {
         let movie = GuideBox.movies(.none)
         guard let result = result else { return }

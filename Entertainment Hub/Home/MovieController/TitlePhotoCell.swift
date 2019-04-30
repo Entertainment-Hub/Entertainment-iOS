@@ -10,7 +10,7 @@ import UIKit
 
 class TitlePhotoCell: UICollectionViewCell {
     
-    var result: MovieResult? {
+    var result: TitleResult? {
         didSet {
             guard let poster = self.result?.poster400X570 else { return }
             guard let imageURL = URL(string: poster) else { return }

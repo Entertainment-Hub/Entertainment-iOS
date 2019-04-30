@@ -59,7 +59,7 @@ protocol Moya: Path {
     var apiKey: String {get}
     
     var components: URLComponents {get}
-    func get(completion: @escaping (_ annotations: [MovieResult], _ error: Error?) -> Void)
+    func get(completion: @escaping (_ annotations: [TitleResult], _ error: Error?) -> Void)
 }
 
 extension GuideBox: Moya {
@@ -133,7 +133,7 @@ extension GuideBox: Moya {
     }
     
     
-    func get(completion: @escaping (_ annotations: [MovieResult], _ error: Error?) -> Void) {
+    func get(completion: @escaping (_ annotations: [TitleResult], _ error: Error?) -> Void) {
         guard let url = self.components.url else { return  }
         print("---")
         print(url)
@@ -142,7 +142,7 @@ extension GuideBox: Moya {
             guard let data = data, error == nil else { return }
             do {
                 let decoder = JSONDecoder()
-                let subscription = try decoder.decode(SubscriptionMovieFormat.self, from: data)
+                let subscription = try decoder.decode(SubscriptionFormat.self, from: data)
                 completion(subscription.results, nil)
         
             } catch let error as NSError {

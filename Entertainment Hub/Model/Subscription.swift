@@ -11,8 +11,8 @@ import Foundation
 
 class Subscription {
     
-    var subscriptionMovieResponse: SubscriptionMovieFormat?
-    var subscriptionShowResponse: SubscriptionShowFormat?
+    var subscriptionMovieResponse: SubscriptionFormat?
+    var subscriptionShowResponse: SubscriptionFormat?
     var showSearchFormat: ShowSearchFormat?
 
     init(from: SubscriptionName) {
@@ -26,13 +26,13 @@ class Subscription {
     }
     
     
-    func allMovies() -> [MovieResult]? {
+    func allMovies() -> [TitleResult]? {
         guard let subscription = subscriptionMovieResponse else { return nil}
         return subscription.results
     }
     
     
-    func allShows() -> [ShowResult]? {
+    func allShows() -> [TitleResult]? {
         guard let showResponse = subscriptionShowResponse else { return nil}
         return showResponse.results
     }
@@ -44,7 +44,7 @@ class Subscription {
 
     
     /* Movie JSON */
-    private func readMovieJSON(resource: String) -> SubscriptionMovieFormat? {
+    private func readMovieJSON(resource: String) -> SubscriptionFormat? {
         guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else {
             print("COULD NOT FIND FILE")
             return nil
@@ -53,7 +53,7 @@ class Subscription {
         do {
             let data = try Data(contentsOf: fileURL)
             let jsonDecoder = JSONDecoder()
-            let subscription =  try jsonDecoder.decode(SubscriptionMovieFormat.self, from: data)
+            let subscription =  try jsonDecoder.decode(SubscriptionFormat.self, from: data)
             return subscription
             
         } catch { print(error.localizedDescription)}
@@ -61,7 +61,7 @@ class Subscription {
     }
     
     /* Show JSON */
-    private func readShowJSON(resource: String) -> SubscriptionShowFormat? {
+    private func readShowJSON(resource: String) -> SubscriptionFormat? {
         guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else {
             print("COULD NOT FIND FILE")
             return nil
@@ -70,7 +70,7 @@ class Subscription {
         do {
             let data = try Data(contentsOf: fileURL)
             let jsonDecoder = JSONDecoder()
-            let subscription =  try jsonDecoder.decode(SubscriptionShowFormat.self, from: data)
+            let subscription =  try jsonDecoder.decode(SubscriptionFormat.self, from: data)
             return subscription
             
         } catch { print(error.localizedDescription)}

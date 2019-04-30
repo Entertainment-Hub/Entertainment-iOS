@@ -20,8 +20,8 @@ class HomeController: UIViewController {
     let hulu = Subscription(from: .hulu)
     
     var headerNames = ["Amazon Prime", "Netflix", "iTunes", "Hulu"]
-    var moviesArray = [[MovieResult]]()
-    var showsArray = [[ShowResult]]()
+    var moviesArray = [[TitleResult]]()
+    var showsArray = [[TitleResult]]()
     
     lazy var segmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Movies","Shows"])
@@ -137,21 +137,17 @@ extension HomeController: UICollectionViewDataSource {
             exploreCell?.imageView.contentMode = .scaleAspectFill
         }
         
-        
-        /* TODO: Clean this up. */
-        var path = ""
+
+        var artworkPath: String?
         if segmentedControl.selectedSegmentIndex == 0 {
-            if indexPath.section == 0 {
-                path = showsArray[indexPath.section][indexPath.item].artwork608X342
-            } else {
-                path = moviesArray[indexPath.section][indexPath.item].poster400X570
-            }
+            artworkPath = (indexPath.section == 0) ? showsArray[indexPath.section][indexPath.item].artwork608X342 : moviesArray[indexPath.section][indexPath.item].poster400X570
         } else {
-            path = showsArray[indexPath.section][indexPath.item].artwork608X342
+            artworkPath = showsArray[indexPath.section][indexPath.item].artwork608X342
         }
+        
+        guard let path = artworkPath else { return cell }
         let url = URL(string: path)
         exploreCell?.imageView.kf.setImage(with: url)
-        
         return cell
     }
     
@@ -170,9 +166,10 @@ extension HomeController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.section, indexPath.item)
         
-        let movieController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
-        movieController.result = moviesArray[indexPath.section][indexPath.item]
-        navigationController?.pushViewController(movieController, animated: true)        
+        let titleController = TitleController(collectionViewLayout: UICollectionViewFlowLayout())
+        let selectedSegmentIndex = segmentedControl.selectedSegmentIndex == 0
+        titleController.result = (selectedSegmentIndex) ? moviesArray[indexPath.section][indexPath.item] : showsArray[indexPath.section][indexPath.item]
+        navigationController?.pushViewController(titleController, animated: true)        
     }
 }
 

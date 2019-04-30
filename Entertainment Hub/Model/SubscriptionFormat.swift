@@ -1,35 +1,40 @@
 //
-//  ShowSearchFormat.swift
+//  Subscriptions.swift
 //  Entertainment Hub
 //
-//  Created by Michael Lema on 4/29/19.
+//  Created by Michael Lema on 2/23/19.
 //  Copyright © 2019 Michael Lema. All rights reserved.
 //
 
+// To parse the JSON, add this file to your project and do:
+//
+//   let subscriptions = try? newJSONDecoder().decode(Subscriptions.self, from: jsonData)
 import Foundation
 
-struct ShowSearchFormat: Codable {
+struct SubscriptionFormat: Codable {
     let totalResults: Int
-    let results: [SearchResult]
+    let totalReturned: Int
+    let results: [TitleResult]
     
     enum CodingKeys: String, CodingKey {
         case totalResults = "total_results"
+        case totalReturned = "total_returned"
         case results = "results"
     }
 }
 
-struct SearchResult: Codable {
+struct TitleResult: Codable {
     let id: Int
     let title: String
     let alternateTitles: [String]
     let containerShow: Int?
-    let firstAired: SubFirstAired?
+    let firstAired: String?
     let imdbID: String?
     let tvdb: Int?
     let themoviedb: Int
     let freebase: String?
     let wikipediaID: Int?
-    let tvrage: Tvrage?
+    let tvrage: SubTvrage?
     let artwork208X117: String?
     let artwork304X171: String?
     let artwork448X252: String?
@@ -80,35 +85,7 @@ struct SearchResult: Codable {
     }
 }
 
-enum SubFirstAired: Codable {
-    case bool(Bool)
-    case string(String)
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let x = try? container.decode(Bool.self) {
-            self = .bool(x)
-            return
-        }
-        if let x = try? container.decode(String.self) {
-            self = .string(x)
-            return
-        }
-        throw DecodingError.typeMismatch(SubFirstAired.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for SubFirstAired"))
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        switch self {
-        case .bool(let x):
-            try container.encode(x)
-        case .string(let x):
-            try container.encode(x)
-        }
-    }
-}
-
-struct Tvrage: Codable {
+struct SubTvrage: Codable {
     let tvrageID: Int?
     let link: String?
     
@@ -117,3 +94,4 @@ struct Tvrage: Codable {
         case link = "link"
     }
 }
+

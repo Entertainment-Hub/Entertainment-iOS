@@ -16,7 +16,7 @@ class TitleController: UICollectionViewController {
     let headerId = "headerId"
     let homePostCellId = "homePostCellId"
     
-    var result: MovieResult? {
+    var result: TitleResult? {
         didSet {
             print(result?.originalTitle)
         }
