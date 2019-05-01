@@ -62,7 +62,7 @@ class HomeController: UIViewController {
     
     @objc fileprivate func handleChange() {
         MKProgress.show(after: 0.1, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.collectionView?.reloadData()
             MKProgress.hide(true)
         }

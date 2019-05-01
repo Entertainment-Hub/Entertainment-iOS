@@ -25,9 +25,6 @@ class MainTabBarController: UITabBarController {
         // Search
         let searchNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController(collectionViewLayout: UICollectionViewFlowLayout()))
         
-        // Library
-        //let libraryNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "Library"), selectedImage: #imageLiteral(resourceName: "Library"), rootViewController: LibraryController(collectionViewLayout: UICollectionViewFlowLayout()))
-        
         // User Profile
         let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: UserProfileController())
         
@@ -38,7 +35,6 @@ class MainTabBarController: UITabBarController {
         modifyTabBarAppearance()
         //viewControllers = [browseNavController, libraryNavController, userProfileNavController, settingsNavController]
         viewControllers = [browseNavController, searchNavController, userProfileNavController, settingsNavController]
-        //viewControllers = [searchNavController, browseNavController, libraryNavController, userProfileNavController, settingsNavController]
     }
     
     fileprivate func modifyTabBarAppearance() {
@@ -52,6 +48,7 @@ class MainTabBarController: UITabBarController {
         let viewController = rootViewController
         let navController = UINavigationController(rootViewController: viewController)
         navController.navigationBar.barTintColor = UIColor.App.gray
+        navController.navigationBar.tintColor = .white
         navController.tabBarItem.image = unselectedImage
         navController.tabBarItem.selectedImage = selectedImage
         return navController
