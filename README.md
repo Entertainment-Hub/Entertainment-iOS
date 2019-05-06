@@ -7,6 +7,8 @@ Discover new content to watch
  <img src = "/Demo/Preview.svg" width = "600" >
 </p>
 
+[Video Demo](https://www.dropbox.com/s/9idoz9crkcri342/demo.mov?dl=0)
+
 ##  Get Started
 
 Create a new plist file called **Configuration.plist** with the [Guidebox API Key](https://api.guidebox.com)
